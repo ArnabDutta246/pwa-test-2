@@ -12,21 +12,13 @@ export interface Post{
   providedIn: 'root'
 })
 export class DbService{
-  url ="https://jsonplaceholder.typicode.com/posts";
-
+  // Demo: "api/values/7/8"
+  pocUrl = "api/values/7/8";
   constructor(private http:HttpClient) { }
-  
   // db service
   postNumberToDb(num1:number,num2:number):Observable<any>{
-    return this.http.post<any>(this.url,{num1:num1,num2:num2});
+    //let getPocR = `${this.pocUrl}/${num1}/${num2}`;
+    return this.http.get<any>(this.pocUrl);
   }
 
-
-  // get all posts
-  getPosts():Observable<any>{  
-   return this.http.get<any>(this.url).pipe(catchError((error)=>throwError(error)));
-  }
-  // create
-  // update 
-  // delete
 }

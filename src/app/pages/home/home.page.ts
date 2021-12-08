@@ -16,7 +16,7 @@ export class HomePage implements OnInit {
   // addition
   num1:number;
   num2:number;
-  result:number;
+  result:number = 0;
   constructor(private common:CommonService,private platform:Platform,private sw:SwService,private db:DbService) { }
   ngOnInit() {
   }
@@ -39,6 +39,12 @@ export class HomePage implements OnInit {
   }
   // submit
   submit(){
-    this.db.postNumberToDb(this.num1,this.num2)
+    console.log("numbers:",this.num1,this.num2);
+    this.db.postNumberToDb(this.num1,this.num2).subscribe(res=>{
+      this.result = res.result;
+      console.log("after sum result",res);
+    },err=>{
+      console.log("error",err);
+    })
   }
 }
