@@ -25,11 +25,7 @@
   "generatorApp": "bubblewrap-cli",
   "webManifestUrl": "https://pwa-poc-ad.netlify.app/manifest.webmanifest",
   "fallbackType": "customtabs",
-  "features": {
-    "locationDelegation": {
-      "enabled": true
-    }
-  },
+  "features": {},
   "alphaDependencies": {
     "enabled": false
   },

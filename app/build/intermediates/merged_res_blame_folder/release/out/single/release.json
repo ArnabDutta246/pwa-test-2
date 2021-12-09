@@ -16,12 +16,12 @@
         "source": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\src\\main\\res\\drawable-xhdpi\\splash.png"
     },
     {
-        "merged": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_splash.png.flat",
-        "source": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\src\\main\\res\\drawable-hdpi\\splash.png"
-    },
-    {
         "merged": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\build\\intermediates\\res\\merged\\release\\drawable-anydpi_shortcut_legacy_background.xml.flat",
         "source": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\src\\main\\res\\drawable-anydpi\\shortcut_legacy_background.xml"
+    },
+    {
+        "merged": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_splash.png.flat",
+        "source": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\src\\main\\res\\drawable-hdpi\\splash.png"
     },
     {
         "merged": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_splash.png.flat",
@@ -88,15 +88,15 @@
         "source": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\build\\intermediates\\res\\merged\\release\\xml_filepaths.xml.flat",
+        "source": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\src\\main\\res\\xml\\filepaths.xml"
+    },
+    {
         "merged": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_maskable.png.flat",
         "source": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\src\\main\\res\\mipmap-hdpi\\ic_maskable.png"
     },
     {
         "merged": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\build\\intermediates\\res\\merged\\release\\raw_web_app_manifest.json.flat",
         "source": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\src\\main\\res\\raw\\web_app_manifest.json"
-    },
-    {
-        "merged": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\build\\intermediates\\res\\merged\\release\\xml_filepaths.xml.flat",
-        "source": "D:\\ArnabDutta\\Practice\\ionic-pwa-2\\app\\src\\main\\res\\xml\\filepaths.xml"
     }
 ]
