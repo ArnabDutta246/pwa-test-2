@@ -1,0 +1,306 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3    Copyright 2019 Google Inc. All Rights Reserved.
+4
+5     Licensed under the Apache License, Version 2.0 (the "License");
+6     you may not use this file except in compliance with the License.
+7     You may obtain a copy of the License at
+8
+9         http://www.apache.org/licenses/LICENSE-2.0
+10
+11     Unless required by applicable law or agreed to in writing, software
+12     distributed under the License is distributed on an "AS IS" BASIS,
+13     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14     See the License for the specific language governing permissions and
+15     limitations under the License.
+16-->
+17<!--
+18 The "package" attribute is rewritten by the Gradle build with the value of applicationId.
+19     It is still required here, as it is used to derive paths, for instance when referring
+20     to an Activity by ".MyActivity" instead of the full name. If more Activities are added to the
+21     application, the package attribute will need to reflect the correct path in order to use
+22     the abbreviated format.
+23-->
+24<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+25    package="app.netlify.pwa_poc_ad.twa"
+26    android:versionCode="1"
+27    android:versionName="1" >
+28
+29    <uses-sdk
+30        android:minSdkVersion="19"
+30-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml
+31        android:targetSdkVersion="31" />
+31-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml
+32
+33    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+33-->[com.google.androidbrowserhelper:locationdelegation:1.0.1] C:\Users\mcc2\.gradle\caches\transforms-2\files-2.1\6533a4776060e2dafc326b30a0222ee1\locationdelegation-1.0.1\AndroidManifest.xml:11:5-79
+33-->[com.google.androidbrowserhelper:locationdelegation:1.0.1] C:\Users\mcc2\.gradle\caches\transforms-2\files-2.1\6533a4776060e2dafc326b30a0222ee1\locationdelegation-1.0.1\AndroidManifest.xml:11:22-76
+34
+35    <queries>
+35-->[com.google.androidbrowserhelper:androidbrowserhelper:2.3.0] C:\Users\mcc2\.gradle\caches\transforms-2\files-2.1\572def1352afcb56982bb86acf89682d\androidbrowserhelper-2.3.0\AndroidManifest.xml:26:5-34:15
+36        <intent>
+36-->[com.google.androidbrowserhelper:androidbrowserhelper:2.3.0] C:\Users\mcc2\.gradle\caches\transforms-2\files-2.1\572def1352afcb56982bb86acf89682d\androidbrowserhelper-2.3.0\AndroidManifest.xml:27:9-33:18
+37            <action android:name="android.intent.action.VIEW" />
+37-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:126:17-68
+37-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:126:25-66
+38
+39            <category android:name="android.intent.category.BROWSABLE" />
+39-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:128:17-77
+39-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:128:27-75
+40
+41            <data android:scheme="https" />
+41-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:129:17-130:54
+41-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:129:23-45
+42        </intent>
+43    </queries>
+44
+45    <application
+45-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:29:5-172:19
+46        android:name="app.netlify.pwa_poc_ad.twa.Application"
+46-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:30:9-35
+47        android:allowBackup="true"
+47-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:31:9-35
+48        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+48-->[androidx.core:core:1.1.0] C:\Users\mcc2\.gradle\caches\transforms-2\files-2.1\e601daed4ba62929db8b322b2974c8f8\core-1.1.0\AndroidManifest.xml:24:18-86
+49        android:icon="@mipmap/ic_launcher"
+49-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:32:9-43
+50        android:label="@string/appName"
+50-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:33:9-40
+51        android:manageSpaceActivity="com.google.androidbrowserhelper.trusted.ManageDataLauncherActivity"
+51-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:35:9-105
+52        android:supportsRtl="true"
+52-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:37:9-35
+53        android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+53-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:38:9-68
+54        <meta-data
+54-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:40:9-42:58
+55            android:name="asset_statements"
+55-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:41:13-44
+56            android:resource="@string/assetStatements" />
+56-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:42:13-55
+57        <meta-data
+57-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:45:13-47:58
+58            android:name="web_manifest_url"
+58-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:46:17-48
+59            android:value="@string/webManifestUrl" />
+59-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:47:17-55
+60        <meta-data
+60-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:50:9-52:52
+61            android:name="twa_generator"
+61-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:51:13-41
+62            android:value="@string/generatorApp" />
+62-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:52:13-49
+63
+64        <activity android:name="com.google.androidbrowserhelper.trusted.ManageDataLauncherActivity" >
+64-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:55:13-59:24
+64-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:55:23-104
+65            <meta-data
+65-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:56:13-58:53
+66                android:name="android.support.customtabs.trusted.MANAGE_SPACE_URL"
+66-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:57:17-83
+67                android:value="@string/launchUrl" />
+67-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:58:17-50
+68        </activity>
+69        <activity
+69-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:62:9-134:20
+70            android:name="app.netlify.pwa_poc_ad.twa.LauncherActivity"
+70-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:62:19-50
+71            android:alwaysRetainTaskState="true"
+71-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:63:13-49
+72            android:exported="true"
+72-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:65:13-36
+73            android:label="@string/launcherName" >
+73-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:64:13-49
+74            <meta-data
+74-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:66:13-67:53
+75                android:name="android.support.customtabs.trusted.DEFAULT_URL"
+75-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:66:24-85
+76                android:value="@string/launchUrl" />
+76-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:67:17-50
+77            <meta-data
+77-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:69:13-71:58
+78                android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR"
+78-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:70:17-83
+79                android:resource="@color/colorPrimary" />
+79-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:71:17-55
+80            <meta-data
+80-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:73:13-75:61
+81                android:name="android.support.customtabs.trusted.NAVIGATION_BAR_COLOR"
+81-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:74:17-87
+82                android:resource="@color/navigationColor" />
+82-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:75:17-58
+83            <meta-data
+83-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:77:13-79:65
+84                android:name="android.support.customtabs.trusted.NAVIGATION_BAR_COLOR_DARK"
+84-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:78:17-92
+85                android:resource="@color/navigationColorDark" />
+85-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:79:17-62
+86            <meta-data
+86-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:81:13-83:68
+87                android:name="androix.browser.trusted.NAVIGATION_BAR_DIVIDER_COLOR"
+87-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:82:17-84
+88                android:resource="@color/navigationDividerColor" />
+88-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:83:17-65
+89            <meta-data
+89-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:85:13-87:72
+90                android:name="androix.browser.trusted.NAVIGATION_BAR_DIVIDER_COLOR_DARK"
+90-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:86:17-89
+91                android:resource="@color/navigationDividerColorDark" />
+91-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:87:17-69
+92            <meta-data
+92-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:89:13-90:54
+93                android:name="android.support.customtabs.trusted.SPLASH_IMAGE_DRAWABLE"
+93-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:89:24-95
+94                android:resource="@drawable/splash" />
+94-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:90:17-52
+95            <meta-data
+95-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:92:13-93:60
+96                android:name="android.support.customtabs.trusted.SPLASH_SCREEN_BACKGROUND_COLOR"
+96-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:92:24-104
+97                android:resource="@color/backgroundColor" />
+97-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:93:17-58
+98            <meta-data
+98-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:95:13-96:71
+99                android:name="android.support.customtabs.trusted.SPLASH_SCREEN_FADE_OUT_DURATION"
+99-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:95:24-105
+100                android:value="@integer/splashScreenFadeOutDuration" />
+100-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:96:17-69
+101            <meta-data
+101-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:98:13-99:60
+102                android:name="android.support.customtabs.trusted.FILE_PROVIDER_AUTHORITY"
+102-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:98:24-97
+103                android:value="@string/providerAuthority" />
+103-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:99:17-58
+104            <meta-data
+104-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:101:13-97
+105                android:name="android.app.shortcuts"
+105-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:101:24-60
+106                android:resource="@xml/shortcuts" />
+106-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:101:61-94
+107            <meta-data
+107-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:103:13-104:56
+108                android:name="android.support.customtabs.trusted.FALLBACK_STRATEGY"
+108-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:103:24-91
+109                android:value="@string/fallbackType" />
+109-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:104:17-53
+110            <meta-data
+110-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:109:13-110:45
+111                android:name="android.support.customtabs.trusted.DISPLAY_MODE"
+111-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:109:24-86
+112                android:value="immersive" />
+112-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:110:17-42
+113            <meta-data
+113-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:113:13-114:54
+114                android:name="android.support.customtabs.trusted.SCREEN_ORIENTATION"
+114-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:113:24-92
+115                android:value="@string/orientation" />
+115-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:114:17-52
+116
+117            <intent-filter>
+117-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:120:13-123:29
+118                <action android:name="android.intent.action.MAIN" />
+118-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:121:17-69
+118-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:121:25-66
+119
+120                <category android:name="android.intent.category.LAUNCHER" />
+120-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:122:17-77
+120-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:122:27-74
+121            </intent-filter>
+122            <intent-filter android:autoVerify="true" >
+122-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:125:13-131:29
+122-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:125:28-53
+123                <action android:name="android.intent.action.VIEW" />
+123-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:126:17-68
+123-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:126:25-66
+124
+125                <category android:name="android.intent.category.DEFAULT" />
+125-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:127:17-76
+125-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:127:27-73
+126                <category android:name="android.intent.category.BROWSABLE" />
+126-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:128:17-77
+126-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:128:27-75
+127
+128                <data
+128-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:129:17-130:54
+129                    android:host="@string/hostName"
+129-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:130:21-52
+130                    android:scheme="https" />
+130-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:129:23-45
+131            </intent-filter>
+132        </activity>
+133        <activity android:name="com.google.androidbrowserhelper.trusted.FocusActivity" />
+133-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:136:9-90
+133-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:136:19-87
+134        <activity
+134-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:138:9-139:62
+135            android:name="com.google.androidbrowserhelper.trusted.WebViewFallbackActivity"
+135-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:138:19-97
+136            android:configChanges="orientation|screenSize" />
+136-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:139:13-59
+137
+138        <provider
+138-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:141:9-149:20
+139            android:name="androidx.core.content.FileProvider"
+139-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:142:13-62
+140            android:authorities="@string/providerAuthority"
+140-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:143:13-60
+141            android:exported="false"
+141-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:145:13-37
+142            android:grantUriPermissions="true" >
+142-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:144:13-47
+143            <meta-data
+143-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:146:13-148:53
+144                android:name="android.support.FILE_PROVIDER_PATHS"
+144-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:147:17-67
+145                android:resource="@xml/filepaths" />
+145-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:148:17-50
+146        </provider>
+147
+148        <service
+148-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:151:9-166:19
+149            android:name="app.netlify.pwa_poc_ad.twa.DelegationService"
+149-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:152:13-46
+150            android:enabled="@bool/enableNotification"
+150-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:153:13-55
+151            android:exported="@bool/enableNotification" >
+151-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:154:13-56
+152            <meta-data
+152-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:157:17-159:73
+153                android:name="android.support.customtabs.trusted.SMALL_ICON"
+153-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:158:21-81
+154                android:resource="@drawable/ic_notification_icon" />
+154-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:159:21-70
+155
+156            <intent-filter>
+156-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:162:13-165:29
+157                <action android:name="android.support.customtabs.trusted.TRUSTED_WEB_ACTIVITY_SERVICE" />
+157-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:163:17-105
+157-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:163:25-103
+158
+159                <category android:name="android.intent.category.DEFAULT" />
+159-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:127:17-76
+159-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:127:27-73
+160            </intent-filter>
+161        </service>
+162
+163        <activity android:name="com.google.androidbrowserhelper.locationdelegation.PermissionRequestActivity" />
+163-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:169:13-170:89
+163-->D:\ArnabDutta\Practice\ionic-pwa-2\app\src\main\AndroidManifest.xml:169:23-123
+164        <activity
+164-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\mcc2\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+165            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+165-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\mcc2\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+166            android:exported="false"
+166-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\mcc2\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+167            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+167-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\mcc2\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+168
+169        <meta-data
+169-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\mcc2\.gradle\caches\transforms-2\files-2.1\937c5050898784d30c656655e5f36fd6\play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+170            android:name="com.google.android.gms.version"
+170-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\mcc2\.gradle\caches\transforms-2\files-2.1\937c5050898784d30c656655e5f36fd6\play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+171            android:value="@integer/google_play_services_version" />
+171-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\mcc2\.gradle\caches\transforms-2\files-2.1\937c5050898784d30c656655e5f36fd6\play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+172    </application>
+173
+174</manifest>

@@ -1,0 +1,8 @@
+app/netlify/pwa_poc_ad/twa/Application.java
+ app.netlify.pwa_poc_ad.twa.Application
+app/netlify/pwa_poc_ad/twa/DelegationService.java
+ app.netlify.pwa_poc_ad.twa.DelegationService
+app/netlify/pwa_poc_ad/twa/LauncherActivity.java
+ app.netlify.pwa_poc_ad.twa.LauncherActivity
+app/netlify/pwa_poc_ad/twa/BuildConfig.java
+ app.netlify.pwa_poc_ad.twa.BuildConfig
