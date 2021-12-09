@@ -41,7 +41,7 @@ export class HomePage implements OnInit {
   submit(){
     console.log("numbers:",this.num1,this.num2);
     this.db.postNumberToDb(this.num1,this.num2).subscribe(res=>{
-      this.result = res.result;
+      this.result = res.results;
       console.log("after sum result",res);
     },err=>{
       console.log("error",err);
