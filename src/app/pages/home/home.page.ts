@@ -3,6 +3,7 @@ import { Platform } from '@ionic/angular';
 import { CommonService } from 'src/app/shared/common/common.service';
 import { DbService } from 'src/app/shared/db/db.service';
 import { A2HS,SwService } from 'src/app/shared/sw/sw.service';
+import { AppVersion } from '@ionic-native/app-version/ngx';
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -17,7 +18,36 @@ export class HomePage implements OnInit {
   num1:number;
   num2:number;
   result:number = 0;
-  constructor(private common:CommonService,private platform:Platform,private sw:SwService,private db:DbService) { }
+
+  //
+  AppName:string;
+  PackageName:string;
+  VersionCode:string|number;
+  VersionNumber:string;
+
+  constructor(private appVersion: AppVersion,private common:CommonService,private platform:Platform,private sw:SwService,private db:DbService) {
+    this.appVersion.getAppName().then(value => {
+      this.AppName = value;
+    }).catch(err => {
+      alert(err);
+    });
+    this.appVersion.getPackageName().then(value => {
+      this.PackageName = value;
+    }).catch(err => {
+      alert(err);
+    });
+    this.appVersion.getVersionCode().then(value => {
+      this.VersionCode = value;
+    }).catch(err => {
+      alert(err);
+    });
+    this.appVersion.getVersionNumber().then(value => {
+      this.VersionNumber = value;
+    }).catch(err => {
+      alert(err);
+    });
+   }
+  
   ngOnInit() {
   }
   ionViewWillEnter(){

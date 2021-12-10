@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import {HttpClientModule, HTTP_INTERCEPTORS} from "@angular/common/http";
+import { AppVersion } from '@ionic-native/app-version/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -18,7 +19,7 @@ import {HttpClientModule, HTTP_INTERCEPTORS} from "@angular/common/http";
   // or after 30 seconds (whichever comes first).
   registrationStrategy: 'registerWhenStable:30000'
 })],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [AppVersion,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

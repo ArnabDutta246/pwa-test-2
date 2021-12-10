@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Ionic Pwa v0.3.1</ion-title>
+    <ion-title>Ionic Pwa v0.1.13</ion-title>
     <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -31,4 +31,19 @@
       <ion-label slot="end">{{result}}</ion-label>
     </ion-item>
   </ion-card>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-label>{{AppName}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Package</ion-label>
+      <ion-label>{{PackageName}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Version</ion-label>
+      <ion-label>{{VersionNumber}}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

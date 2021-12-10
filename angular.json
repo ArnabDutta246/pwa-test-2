@@ -31,7 +31,7 @@
                 "output": "./svg"
               },
               "src/manifest.webmanifest",
-              "assetlinks.json"
+              "src/assetlinks.json"
             ],
             "styles": ["src/theme/variables.scss", "src/global.scss"],
             "scripts": [],
