@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1639123772645,
+  "timestamp": 1639124986918,
   "index": "https://ArnabDutta246.github.io/pwa-test-2/index.html",
   "assetGroups": [
     {
@@ -66,7 +66,7 @@
         "https://ArnabDutta246.github.io/pwa-test-2/9921.288f59aa55023559d912.js",
         "https://ArnabDutta246.github.io/pwa-test-2/common.1523a6bc8dec4af57df1.js",
         "https://ArnabDutta246.github.io/pwa-test-2/index.html",
-        "https://ArnabDutta246.github.io/pwa-test-2/main.d525332d4c3696e3421a.js",
+        "https://ArnabDutta246.github.io/pwa-test-2/main.c5f774305e1f0f676c79.js",
         "https://ArnabDutta246.github.io/pwa-test-2/manifest.webmanifest",
         "https://ArnabDutta246.github.io/pwa-test-2/polyfills-core-js.a61406ffe267c0714cc8.js",
         "https://ArnabDutta246.github.io/pwa-test-2/polyfills-css-shim.3ac242983f65b8b90f60.js",
@@ -165,8 +165,8 @@
     "https://ArnabDutta246.github.io/pwa-test-2/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://ArnabDutta246.github.io/pwa-test-2/assets/shapes.svg": "5413e95adabcb2cb639970051f55e0ddb64ace53",
     "https://ArnabDutta246.github.io/pwa-test-2/common.1523a6bc8dec4af57df1.js": "e8f2960921d961771ea7897a2f03c90ac080fdd1",
-    "https://ArnabDutta246.github.io/pwa-test-2/index.html": "327cb4eba4845ffd6c5e10367e2859c7c1b4e97e",
-    "https://ArnabDutta246.github.io/pwa-test-2/main.d525332d4c3696e3421a.js": "ab9056b798a4654ee6e90fe7fcdfa27c5c8c8e6f",
+    "https://ArnabDutta246.github.io/pwa-test-2/index.html": "499850e46f7dbf39adc03db442dc76c4ebff66a1",
+    "https://ArnabDutta246.github.io/pwa-test-2/main.c5f774305e1f0f676c79.js": "8f993d937ff6e68e294d7cd3c3bb2e84ea2ed4d1",
     "https://ArnabDutta246.github.io/pwa-test-2/manifest.webmanifest": "4b1316f7c292485559b88705a81067d3cab33f59",
     "https://ArnabDutta246.github.io/pwa-test-2/polyfills-core-js.a61406ffe267c0714cc8.js": "7a897f3a754d083e45896e49ac93ad14e80c2fca",
     "https://ArnabDutta246.github.io/pwa-test-2/polyfills-css-shim.3ac242983f65b8b90f60.js": "a392f71db33d13f1c4bf5e736491f94c32854873",
