@@ -26,26 +26,26 @@ export class HomePage implements OnInit {
   VersionNumber:string;
 
   constructor(private appVersion: AppVersion,private common:CommonService,private platform:Platform,private sw:SwService,private db:DbService) {
-    this.appVersion.getAppName().then(value => {
-      this.AppName = value;
-    }).catch(err => {
-      alert(err);
-    });
-    this.appVersion.getPackageName().then(value => {
-      this.PackageName = value;
-    }).catch(err => {
-      alert(err);
-    });
-    this.appVersion.getVersionCode().then(value => {
-      this.VersionCode = value;
-    }).catch(err => {
-      alert(err);
-    });
-    this.appVersion.getVersionNumber().then(value => {
-      this.VersionNumber = value;
-    }).catch(err => {
-      alert(err);
-    });
+    // this.appVersion.getAppName().then(value => {
+    //   this.AppName = value;
+    // }).catch(err => {
+    //   alert(err);
+    // });
+    // this.appVersion.getPackageName().then(value => {
+    //   this.PackageName = value;
+    // }).catch(err => {
+    //   alert(err);
+    // });
+    // this.appVersion.getVersionCode().then(value => {
+    //   this.VersionCode = value;
+    // }).catch(err => {
+    //   alert(err);
+    // });
+    // this.appVersion.getVersionNumber().then(value => {
+    //   this.VersionNumber = value;
+    // }).catch(err => {
+    //   alert(err);
+    // });
    }
   
   ngOnInit() {

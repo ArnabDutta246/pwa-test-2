@@ -27,13 +27,13 @@ export class AppComponent {
   showButton = false;
   @HostListener('window:beforeinstallprompt', ['$event'])
   onbeforeinstallprompt(e) { 
-    //  console.log("add to home screen listener",e);
-    //  e.preventDefault();
-    //  this.deferredPrompt = e;
-    //  this.showButton = true;
-    //  let a2hs:A2HS = {promt:this.deferredPrompt,showButton:this.showButton};
-    //  this.sw.a2hs.next(a2hs);
-    //  this.sw.a2hs$.subscribe(res=>{console.log(res)})
+     console.log("add to home screen listener",e);
+     e.preventDefault();
+     this.deferredPrompt = e;
+     this.showButton = true;
+     let a2hs:A2HS = {promt:this.deferredPrompt,showButton:this.showButton};
+     this.sw.a2hs.next(a2hs);
+     this.sw.a2hs$.subscribe(res=>{console.log(res)})
   } 
   constructor(
     private commonService:CommonService,
