@@ -26,7 +26,7 @@ export class AppComponent {
   deferredPrompt: any;
   showButton = false;
   @HostListener('window:beforeinstallprompt', ['$event'])
-  onbeforeinstallprompt(e) {
+  onbeforeinstallprompt(e) { 
     //  console.log("add to home screen listener",e);
     //  e.preventDefault();
     //  this.deferredPrompt = e;
