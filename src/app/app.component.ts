@@ -11,8 +11,9 @@ import { A2HS, SwService } from './shared/sw/sw.service';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Home', url: '/Home', icon: 'mail' },
-    // { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
+    { title: 'Home', url: '/home', icon: 'mail' },
+    { title: 'Editor', url: '/code-editor', icon: 'paper-plane' },
+    { title: 'Codepan', url: '/codepan', icon: 'archive' },
     // { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
     // { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
     // { title: 'Trash', url: '/folder/Trash', icon: 'trash' },

@@ -14,6 +14,14 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'code-editor',
+    loadChildren: () => import('./pages/code-editor/code-editor.module').then( m => m.CodeEditorPageModule)
+  },
+  {
+    path: 'codepan',
+    loadChildren: () => import('./pages/codepan/codepan.module').then( m => m.CodepanPageModule)
   }
 ];
 
