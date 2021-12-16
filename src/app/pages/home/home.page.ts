@@ -13,6 +13,7 @@ export class HomePage implements OnInit {
   showBtn:boolean = false;
   pmt:any;
   a2hsRes:any;
+  alreadyAdded:boolean = false;
 
   // addition
   num1:number;
@@ -59,6 +60,7 @@ export class HomePage implements OnInit {
             this.showBtn = res.showButton;
             this.pmt = res.promt;
             this.a2hsRes = res;
+            this.alreadyAdded =  this.showBtn?false:true;
           }
        })
     //}
