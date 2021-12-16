@@ -5,7 +5,7 @@ import { CommonService } from './shared/common/common.service';
 import { Platform } from '@ionic/angular';
 import { A2HS, SwService } from './shared/sw/sw.service';
 
-const windowsref = window.navigator;
+declare const navigator: any;  
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -31,17 +31,16 @@ export class AppComponent {
   @HostListener('window:beforeinstallprompt', ['$event'])
  async onbeforeinstallprompt(e) { 
     // check already installed
-    // const listOfInstalledApps = await navigator['getInstalledRelatedApps'];
-    // console.log(listOfInstalledApps.call());
-    // for (const app of listOfInstalledApps) {
-    //   // These fields are specified by the Web App Manifest spec.
-    //   console.log('platform:', app.platform);
-    //   console.log('url:', app.url);
-    //   console.log('id:', app.id);
-
-    //   // This field is provided by the UA.
-    //   console.log('version:', app.version);
-    //  }
+    const listOfInstalledApps = await navigator.getInstalledRelatedApps();
+    for (const app of listOfInstalledApps) {
+      // These fields are specified by the Web App Manifest spec.
+      console.log('platform:', app.platform);
+      console.log('url:', app.url);
+      console.log('id:', app.id);
+    
+      // This field is provided by the UA.
+      console.log('version:', app.version);
+    }
 
     // show add new buttons
      console.log("add to home screen listener",e);
@@ -58,6 +57,12 @@ export class AppComponent {
     private sw:SwService
   ) {}
   ngOnInit(){
+
+    if("getInstalledRelatedApps" in navigator) {
+      // then... you can call navigator.getInstalledRelatedApps()
+      const result = navigator.getInstalledRelatedApps();
+   }
+
     console.log("is pwa",this.platform.is('pwa'))
     this.networkListener = Network.addListener('networkStatusChange', (status) => {
       this.networkStatus = status;
