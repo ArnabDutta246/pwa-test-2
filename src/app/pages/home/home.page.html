@@ -1,16 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>PW v1.0.10 N10</ion-title>
+    <ion-title>PW v1.0.11 N11</ion-title>
     <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
-  <ion-toolbar color="danger" *ngIf="a2hsRes && showBtn">
-    <ion-title>Install this app</ion-title>
-    <ion-buttons slot="end">
+  <ion-toolbar [color]="showBtn?'danger':'success'" *ngIf="a2hsRes ">
+    <ion-title>{{showBtn?'Install this app':'Pwa App Installed'}}</ion-title>
+    <ion-buttons slot="end" *ngIf="showBtn">
       <ion-button color="dark" fill="solid" (click)="addToHome()">Add Now</ion-button>
     </ion-buttons>
   </ion-toolbar>
+
 </ion-header>
 <ion-content>
 
