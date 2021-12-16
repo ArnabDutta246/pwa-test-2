@@ -68,7 +68,12 @@ export class AppComponent {
     private platform:Platform,
     private sw:SwService
   ) {}
-  ngOnInit(){
+  async ngOnInit(){
+    await navigator.getInstalledRelatedApps().then(
+      (res)=>{
+        console.log("oninit inside promise then",res);
+      }
+    ) 
   // check already installed
   const listOfInstalledApps =  navigator.getInstalledRelatedApps();
   console.log("for installed info oninit",listOfInstalledApps);
