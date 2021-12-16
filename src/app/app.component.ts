@@ -38,18 +38,30 @@ export class AppComponent {
      e.preventDefault();
      this.deferredPrompt = e;
      this.showButton = true;
-     const listOfInstalledApps =  navigator.getInstalledRelatedApps();
-     console.log("for installed info constructor",listOfInstalledApps);
-     let checkWebAppExist = listOfInstalledApps.filter(f=>f.platform == 'webapp');
      this.a2hs = {promt:this.deferredPrompt,showButton:this.showButton};
-     if(checkWebAppExist.length == 0){
-      console.log("if is working",checkWebAppExist,listOfInstalledApps)
-        this.sw.a2hs.next(this.a2hs);
-        this.sw.a2hs$.subscribe(res=>{console.log(res)})
-    }else{
-      console.log("else is working",checkWebAppExist,listOfInstalledApps)
-    }
-
+     await navigator.getInstalledRelatedApps().then(
+      (res)=>{
+        console.log("oninit inside promise then",res);
+        if(res.length){
+          let checkWebAppExist = res.filter(f=>f.platform == 'webapp');
+          if(checkWebAppExist.length == 0){
+            console.log("if is working",checkWebAppExist,res)
+            this.showButton = true;
+            this.a2hs = {promt:this.deferredPrompt,showButton:this.showButton};
+              this.sw.a2hs.next(this.a2hs);
+              this.sw.a2hs$.subscribe(res=>{console.log(res)})
+          }else{
+            console.log("else is working",checkWebAppExist,res)
+          }
+        }else{
+          console.log("else outside is working")
+          this.showButton = true;
+          this.a2hs = {promt:this.deferredPrompt,showButton:this.showButton};
+          this.sw.a2hs.next(this.a2hs);
+          this.sw.a2hs$.subscribe(res=>{console.log(res)})
+        }
+      }
+    ) 
     //      // check already installed
     // const listOfInstalledApps = await navigator.getInstalledRelatedApps();
     // console.log("for installed info",listOfInstalledApps);
@@ -76,6 +88,8 @@ export class AppComponent {
           let checkWebAppExist = listOfInstalledApps.filter(f=>f.platform == 'webapp');
           if(checkWebAppExist.length == 0){
             console.log("if is working",checkWebAppExist,listOfInstalledApps)
+            this.showButton = true;
+            this.a2hs = {promt:this.deferredPrompt,showButton:this.showButton};
               this.sw.a2hs.next(this.a2hs);
               this.sw.a2hs$.subscribe(res=>{console.log(res)})
           }else{
@@ -83,6 +97,8 @@ export class AppComponent {
           }
         }else{
           console.log("else outside is working")
+          this.showButton = true;
+          this.a2hs = {promt:this.deferredPrompt,showButton:this.showButton};
           this.sw.a2hs.next(this.a2hs);
           this.sw.a2hs$.subscribe(res=>{console.log(res)})
         }
