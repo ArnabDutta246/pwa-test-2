@@ -72,6 +72,20 @@ export class AppComponent {
     await navigator.getInstalledRelatedApps().then(
       (res)=>{
         console.log("oninit inside promise then",res);
+        if(res.length){
+          let checkWebAppExist = listOfInstalledApps.filter(f=>f.platform == 'webapp');
+          if(checkWebAppExist.length == 0){
+            console.log("if is working",checkWebAppExist,listOfInstalledApps)
+              this.sw.a2hs.next(this.a2hs);
+              this.sw.a2hs$.subscribe(res=>{console.log(res)})
+          }else{
+            console.log("else is working",checkWebAppExist,listOfInstalledApps)
+          }
+        }else{
+          console.log("else outside is working")
+          this.sw.a2hs.next(this.a2hs);
+          this.sw.a2hs$.subscribe(res=>{console.log(res)})
+        }
       }
     ) 
   // check already installed
@@ -93,12 +107,6 @@ export class AppComponent {
     // This field is provided by the UA.
     console.log('version:', app.version);
   }
-    if("getInstalledRelatedApps" in navigator) {
-      // then... you can call navigator.getInstalledRelatedApps()
-      const result = navigator.getInstalledRelatedApps();
-   }
-
-    console.log("is pwa",this.platform.is('pwa'))
     this.networkListener = Network.addListener('networkStatusChange', (status) => {
       this.networkStatus = status;
       console.log('Network status changed', status);
