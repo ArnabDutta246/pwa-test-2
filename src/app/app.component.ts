@@ -30,17 +30,7 @@ export class AppComponent {
   showButton = false;
   @HostListener('window:beforeinstallprompt', ['$event'])
  async onbeforeinstallprompt(e) { 
-    // check already installed
-    const listOfInstalledApps = await navigator.getInstalledRelatedApps();
-    for (const app of listOfInstalledApps) {
-      // These fields are specified by the Web App Manifest spec.
-      console.log('platform:', app.platform);
-      console.log('url:', app.url);
-      console.log('id:', app.id);
-    
-      // This field is provided by the UA.
-      console.log('version:', app.version);
-    }
+
 
     // show add new buttons
      console.log("add to home screen listener",e);
@@ -50,6 +40,19 @@ export class AppComponent {
      let a2hs:A2HS = {promt:this.deferredPrompt,showButton:this.showButton};
      this.sw.a2hs.next(a2hs);
      this.sw.a2hs$.subscribe(res=>{console.log(res)})
+
+         // check already installed
+    const listOfInstalledApps = await navigator.getInstalledRelatedApps();
+    console.log("for installed info",listOfInstalledApps);
+    for (const app of listOfInstalledApps) {
+      // These fields are specified by the Web App Manifest spec.
+      console.log('platform:', app.platform);
+      console.log('url:', app.url);
+      console.log('id:', app.id);
+    
+      // This field is provided by the UA.
+      console.log('version:', app.version);
+    }
   } 
   constructor(
     private commonService:CommonService,
@@ -57,7 +60,18 @@ export class AppComponent {
     private sw:SwService
   ) {}
   ngOnInit(){
-
+  // check already installed
+  const listOfInstalledApps =  navigator.getInstalledRelatedApps();
+  console.log("for installed info",listOfInstalledApps);
+  for (const app of listOfInstalledApps) {
+    // These fields are specified by the Web App Manifest spec.
+    console.log('platform:', app.platform);
+    console.log('url:', app.url);
+    console.log('id:', app.id);
+  
+    // This field is provided by the UA.
+    console.log('version:', app.version);
+  }
     if("getInstalledRelatedApps" in navigator) {
       // then... you can call navigator.getInstalledRelatedApps()
       const result = navigator.getInstalledRelatedApps();
