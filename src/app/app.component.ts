@@ -39,7 +39,7 @@ export class AppComponent {
      this.deferredPrompt = e;
      this.showButton = true;
      const listOfInstalledApps =  navigator.getInstalledRelatedApps();
-     console.log("for installed info",listOfInstalledApps);
+     console.log("for installed info constructor",listOfInstalledApps);
      let checkWebAppExist = listOfInstalledApps.filter(f=>f.platform == 'webapp');
      this.a2hs = {promt:this.deferredPrompt,showButton:this.showButton};
      if(checkWebAppExist.length == 0){
@@ -71,7 +71,7 @@ export class AppComponent {
   ngOnInit(){
   // check already installed
   const listOfInstalledApps =  navigator.getInstalledRelatedApps();
-  console.log("for installed info",listOfInstalledApps);
+  console.log("for installed info oninit",listOfInstalledApps);
   let checkWebAppExist = listOfInstalledApps.filter(f=>f.platform == 'webapp');
   if(checkWebAppExist.length == 0){
     console.log("if is working",checkWebAppExist,listOfInstalledApps)
