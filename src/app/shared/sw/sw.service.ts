@@ -16,21 +16,21 @@ export class SwService {
   a2hs = new BehaviorSubject<A2HS|null>(null);
   a2hs$ = this.a2hs.asObservable();
   constructor( public toastController: ToastController,private updates: SwUpdate) {
-    // this.updates.checkForUpdate().then(res=>{
-    //   console.log("check for update result",res);
-    // })
-    // this.updates.activateUpdate().then(res=>{
-    //   console.log("activated update",res);
-    // })
-    // this.updates.available.subscribe(event => {
-    //   console.log('current version is', event.current);
-    //   console.log('available version is', event.available);
-    //   updates.activateUpdate().then(() => document.location.reload());
-    // });
-    // this.updates.activated.subscribe(event => {
-    //   console.log('old version was', event.previous);
-    //   console.log('new version is', event.current);
-    // });
+    this.updates.checkForUpdate().then(res=>{
+      console.log("check for update result",res);
+    })
+    this.updates.activateUpdate().then(res=>{
+      console.log("activated update",res);
+    })
+    this.updates.available.subscribe(event => {
+      console.log('current version is', event.current);
+      console.log('available version is', event.available);
+      updates.activateUpdate().then(() => document.location.reload());
+    });
+    this.updates.activated.subscribe(event => {
+      console.log('old version was', event.previous);
+      console.log('new version is', event.current);
+    });
    }
     //============== [ A2HS ] ======================
     // pwa re-register
@@ -61,7 +61,8 @@ export class SwService {
         return;
       }
       this.updates.available.subscribe((event)=>{
-        console
+        console.log("update available",event.available,"current version",event.current,"type",event.type);
+        this.updates.activateUpdate().then(() => document.location.reload());
       })
     }
 }

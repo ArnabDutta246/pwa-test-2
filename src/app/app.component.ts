@@ -4,6 +4,8 @@ import { Network } from '@capacitor/network';
 import { CommonService } from './shared/common/common.service';
 import { Platform } from '@ionic/angular';
 import { A2HS, SwService } from './shared/sw/sw.service';
+
+const windowsref = window.navigator;
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -27,7 +29,21 @@ export class AppComponent {
   deferredPrompt: any;
   showButton = false;
   @HostListener('window:beforeinstallprompt', ['$event'])
-  onbeforeinstallprompt(e) { 
+ async onbeforeinstallprompt(e) { 
+    // check already installed
+    const listOfInstalledApps = await navigator['getInstalledRelatedApps'];
+    console.log(listOfInstalledApps.call());
+    for (const app of listOfInstalledApps) {
+      // These fields are specified by the Web App Manifest spec.
+      console.log('platform:', app.platform);
+      console.log('url:', app.url);
+      console.log('id:', app.id);
+
+      // This field is provided by the UA.
+      console.log('version:', app.version);
+     }
+
+    // show add new buttons
      console.log("add to home screen listener",e);
      e.preventDefault();
      this.deferredPrompt = e;

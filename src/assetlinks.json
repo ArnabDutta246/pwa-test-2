@@ -1,4 +1,5 @@
-[{
+[
+  {
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
@@ -7,4 +8,12 @@
         "B6:BF:A4:B0:15:2F:6C:9C:1C:EF:8D:B7:1E:02:3B:2F:F6:9B:AD:BD:8B:4C:B9:D2:DE:D4:74:AD:D7:81:B8:1E"
       ]
     }
-  }]
+  },
+  {
+    "relation": ["delegate_permission/common.query_webapk"],
+    "target": {
+      "namespace": "web",
+      "site": "https://pwa-poc-ad.netlify.app/manifest.json"
+    }
+  }
+]
