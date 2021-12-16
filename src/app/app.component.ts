@@ -38,8 +38,17 @@ export class AppComponent {
      e.preventDefault();
      this.deferredPrompt = e;
      this.showButton = true;
+     const listOfInstalledApps =  navigator.getInstalledRelatedApps();
+     console.log("for installed info",listOfInstalledApps);
+     let checkWebAppExist = listOfInstalledApps.filter(f=>f.platform == 'webapp');
      this.a2hs = {promt:this.deferredPrompt,showButton:this.showButton};
-
+     if(checkWebAppExist.length == 0){
+      console.log("if is working",checkWebAppExist,listOfInstalledApps)
+        this.sw.a2hs.next(this.a2hs);
+        this.sw.a2hs$.subscribe(res=>{console.log(res)})
+    }else{
+      console.log("else is working",checkWebAppExist,listOfInstalledApps)
+    }
 
     //      // check already installed
     // const listOfInstalledApps = await navigator.getInstalledRelatedApps();
@@ -65,8 +74,11 @@ export class AppComponent {
   console.log("for installed info",listOfInstalledApps);
   let checkWebAppExist = listOfInstalledApps.filter(f=>f.platform == 'webapp');
   if(checkWebAppExist.length == 0){
+    console.log("if is working",checkWebAppExist,listOfInstalledApps)
       this.sw.a2hs.next(this.a2hs);
       this.sw.a2hs$.subscribe(res=>{console.log(res)})
+  }else{
+    console.log("else is working",checkWebAppExist,listOfInstalledApps)
   }
   for (const app of listOfInstalledApps) {
     // These fields are specified by the Web App Manifest spec.
