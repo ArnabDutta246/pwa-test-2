@@ -11,6 +11,6 @@
     "relation": ["delegate_permission/common.query_webapk"],
     "target": {
       "namespace": "web",
-      "site": "https://pwa-poc-ad.netlify.app/manifest.json"
+      "site": "https://pwa-poc-ad.netlify.app/manifest.webmanifest"
     }
   }]

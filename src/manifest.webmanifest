@@ -8,7 +8,7 @@
   "start_url": "/",
   "related_applications": [{
     "platform": "webapp",
-    "url": "https://pwa-poc-ad.netlify.app/manifest.json"
+    "url": "https://pwa-poc-ad.netlify.app/manifest.webmanifest"
   }],
   "icons": [
     {
