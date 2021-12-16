@@ -28,6 +28,7 @@ export class AppComponent {
   // host listener for add to home screen
   deferredPrompt: any;
   showButton = false;
+  a2hs:A2HS;
   @HostListener('window:beforeinstallprompt', ['$event'])
  async onbeforeinstallprompt(e) { 
 
@@ -37,22 +38,21 @@ export class AppComponent {
      e.preventDefault();
      this.deferredPrompt = e;
      this.showButton = true;
-     let a2hs:A2HS = {promt:this.deferredPrompt,showButton:this.showButton};
-     this.sw.a2hs.next(a2hs);
-     this.sw.a2hs$.subscribe(res=>{console.log(res)})
+     this.a2hs = {promt:this.deferredPrompt,showButton:this.showButton};
 
-         // check already installed
-    const listOfInstalledApps = await navigator.getInstalledRelatedApps();
-    console.log("for installed info",listOfInstalledApps);
-    for (const app of listOfInstalledApps) {
-      // These fields are specified by the Web App Manifest spec.
-      console.log('platform:', app.platform);
-      console.log('url:', app.url);
-      console.log('id:', app.id);
+
+    //      // check already installed
+    // const listOfInstalledApps = await navigator.getInstalledRelatedApps();
+    // console.log("for installed info",listOfInstalledApps);
+    // for (const app of listOfInstalledApps) {
+    //   // These fields are specified by the Web App Manifest spec.
+    //   console.log('platform:', app.platform);
+    //   console.log('url:', app.url);
+    //   console.log('id:', app.id);
     
-      // This field is provided by the UA.
-      console.log('version:', app.version);
-    }
+    //   // This field is provided by the UA.
+    //   console.log('version:', app.version);
+    // }
   } 
   constructor(
     private commonService:CommonService,
@@ -63,12 +63,16 @@ export class AppComponent {
   // check already installed
   const listOfInstalledApps =  navigator.getInstalledRelatedApps();
   console.log("for installed info",listOfInstalledApps);
+  let checkWebAppExist = listOfInstalledApps.filter(f=>f.platform == 'webapp');
+  if(checkWebAppExist.length == 0){
+      this.sw.a2hs.next(this.a2hs);
+      this.sw.a2hs$.subscribe(res=>{console.log(res)})
+  }
   for (const app of listOfInstalledApps) {
     // These fields are specified by the Web App Manifest spec.
     console.log('platform:', app.platform);
     console.log('url:', app.url);
     console.log('id:', app.id);
-  
     // This field is provided by the UA.
     console.log('version:', app.version);
   }

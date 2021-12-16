@@ -51,7 +51,7 @@ export class HomePage implements OnInit {
   ngOnInit() {
   }
   ionViewWillEnter(){
-    if (!this.platform.is('pwa')) {
+    //if (!this.platform.is('pwa')) {
           this.sw.a2hs$.subscribe((res)=>{
           console.log("a2hs in home page",res);
           this.a2hsRes = res;
@@ -61,7 +61,7 @@ export class HomePage implements OnInit {
             this.a2hsRes = res;
           }
        })
-    }
+    //}
   } 
   // a2hs
   addToHome(){
