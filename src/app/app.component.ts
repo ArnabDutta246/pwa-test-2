@@ -31,17 +31,17 @@ export class AppComponent {
   @HostListener('window:beforeinstallprompt', ['$event'])
  async onbeforeinstallprompt(e) { 
     // check already installed
-    const listOfInstalledApps = await navigator['getInstalledRelatedApps'];
-    console.log(listOfInstalledApps.call());
-    for (const app of listOfInstalledApps) {
-      // These fields are specified by the Web App Manifest spec.
-      console.log('platform:', app.platform);
-      console.log('url:', app.url);
-      console.log('id:', app.id);
+    // const listOfInstalledApps = await navigator['getInstalledRelatedApps'];
+    // console.log(listOfInstalledApps.call());
+    // for (const app of listOfInstalledApps) {
+    //   // These fields are specified by the Web App Manifest spec.
+    //   console.log('platform:', app.platform);
+    //   console.log('url:', app.url);
+    //   console.log('id:', app.id);
 
-      // This field is provided by the UA.
-      console.log('version:', app.version);
-     }
+    //   // This field is provided by the UA.
+    //   console.log('version:', app.version);
+    //  }
 
     // show add new buttons
      console.log("add to home screen listener",e);
