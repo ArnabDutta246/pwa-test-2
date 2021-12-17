@@ -3,7 +3,7 @@
     <ion-title>PW v1.0.12 N12</ion-title>
     <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
-    </ion-buttons>
+    </ion-buttons>     
   </ion-toolbar>
   <ion-toolbar [color]="showBtn?'danger':'success'" *ngIf="a2hsRes">
     <ion-title>{{showBtn?'Install this app':'Pwa App Installed'}}</ion-title>
@@ -12,7 +12,7 @@
     </ion-buttons>
   </ion-toolbar>
   <ion-toolbar color="success" *ngIf="alreadyAdded">
-    <ion-title>'Pwa App Installed</ion-title>
+    <ion-title>Pwa App Installed</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>

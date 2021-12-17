@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'codepan',
     loadChildren: () => import('./pages/codepan/codepan.module').then( m => m.CodepanPageModule)
+  },
+  {
+    path: 'themes',
+    loadChildren: () => import('./pages/themes/themes.module').then( m => m.ThemesPageModule)
   }
 ];
 
