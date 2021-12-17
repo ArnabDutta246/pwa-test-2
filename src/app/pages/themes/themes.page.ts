@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from 'src/app/shared/theme/theme.service';
 
 @Component({
   selector: 'app-themes',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThemesPage implements OnInit {
   themeColor:string;
-  constructor() { }
+  constructor(private themeServ:ThemeService) { }
 
   ngOnInit() {
   }
@@ -15,6 +16,7 @@ export class ThemesPage implements OnInit {
   // change select theme
   changeSelectItem(e){
     console.log("selected theme color",this.themeColor);
+    this.themeServ.activeTheme(this.themeColor);
   }
 
 }

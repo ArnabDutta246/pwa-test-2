@@ -8,12 +8,13 @@
 </ion-header>
 
 <ion-content>
-  <ion-item>
+  <ion-item [color]="themeColor">
     <ion-label>Theme Color</ion-label>
-    <ion-select okText="Okay" [class]="themeColor" cancelText="Dismiss" [(ngModel)]="themeColor" (ionChange)="changeSelectItem($event)">
+    <ion-select okText="Okay" cancelText="Dismiss" [(ngModel)]="themeColor" (ionChange)="changeSelectItem($event)">
       <ion-select-option value="green">Green</ion-select-option>
       <ion-select-option value="purple">Purple</ion-select-option>
       <ion-select-option value="red">Red</ion-select-option>
+      <ion-select-option value="dark">Dark</ion-select-option>
     </ion-select>
   </ion-item>
   <br>
@@ -25,38 +26,38 @@
     <ion-row>
       <ion-col class="ion-margin-top ion-margin-bottom ion-padding" class="ion-margin-top ion-margin-bottom ion-padding" size="4" size-lg="2" color="dark">
         <div class="sm-card" >
-        <ion-icon name="accessibility-outline"></ion-icon>
-        <ion-text color="ion-text-primary">Home</ion-text>
+        <ion-icon name="accessibility-outline" color="primary"></ion-icon>
+        <ion-text color="primary">Home</ion-text>
       </div>
       </ion-col>
       <ion-col class="ion-margin-top ion-margin-bottom ion-padding" size="4" size-lg="2">
         <div class="sm-card" >
-          <ion-icon name="add-circle-outline"></ion-icon>
-        <ion-text color="ion-text-primary">About</ion-text>
+          <ion-icon color="primary" name="add-circle-outline"></ion-icon>
+          <ion-text color="primary">About</ion-text>
         </div>    
       </ion-col>
       <ion-col class="ion-margin-top ion-margin-bottom ion-padding" size="4" size-lg="2">
         <div class="sm-card" >
-          <ion-icon name="airplane-outline"></ion-icon>
-        <ion-text color="ion-text-primary">Shop</ion-text>
+          <ion-icon name="airplane-outline" color="primary"></ion-icon>
+          <ion-text color="primary">Shop</ion-text>
         </div>
       </ion-col>
       <ion-col class="ion-margin-top ion-margin-bottom ion-padding" size="4" size-lg="2">
         <div class="sm-card">
-          <ion-icon name="alarm-outline"></ion-icon>
-        <ion-text color="ion-text-primary">Blog</ion-text>
+          <ion-icon name="alarm-outline" color="primary"></ion-icon>
+          <ion-text color="primary">Blog</ion-text>
         </div>
       </ion-col>
       <ion-col class="ion-margin-top ion-margin-bottom ion-padding" size="4" size-lg="2">
         <div class="sm-card">
-          <ion-icon name="american-football-outline"></ion-icon>
-        <ion-text color="ion-text-primary">Contact</ion-text>
+          <ion-icon name="american-football-outline" color="primary"></ion-icon>
+        <ion-text color="primary">Contact</ion-text>
         </div>
       </ion-col>
       <ion-col class="ion-margin-top ion-margin-bottom ion-padding" size="4" size-lg="2">
         <div class="sm-card">
-          <ion-icon name="baseball-outline"></ion-icon>
-        <ion-text color="ion-text-primary">Call</ion-text>
+          <ion-icon color="primary" name="baseball-outline"></ion-icon>
+        <ion-text color="primary">Call</ion-text>
         </div>
       </ion-col> 
     </ion-row>
