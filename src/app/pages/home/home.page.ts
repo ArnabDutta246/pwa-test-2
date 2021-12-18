@@ -52,18 +52,18 @@ export class HomePage implements OnInit {
   ngOnInit() {
   }
   ionViewWillEnter(){
-    //if (!this.platform.is('pwa')) {
-          this.sw.a2hs$.subscribe((res)=>{
-          console.log("a2hs in home page",res);
-          this.a2hsRes = res;
-          if(res){
-            this.showBtn = res.showButton;
-            this.pmt = res.promt;
-            this.a2hsRes = res;
-            this.alreadyAdded =  this.showBtn?false:true;
-          }
-       })
-    //}
+    // if (this.platform.is('mobileweb')) {
+    //       this.sw.a2hs$.subscribe((res)=>{
+    //       console.log("a2hs in home page",res);
+    //       this.a2hsRes = res;
+    //       if(res){
+    //         this.showBtn = res.showButton;
+    //         this.pmt = res.promt;
+    //         this.a2hsRes = res;
+    //         this.alreadyAdded =  this.showBtn?false:true;
+    //       }
+    //    })
+    // }
   } 
   // a2hs
   addToHome(){
