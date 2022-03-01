@@ -26,6 +26,23 @@ const routes: Routes = [
   {
     path: 'themes',
     loadChildren: () => import('./pages/themes/themes.module').then( m => m.ThemesPageModule)
+  },
+  // {
+  //   path: '',
+  //   redirectTo: 'folder/Inbox',
+  //   pathMatch: 'full'
+  // },
+  {
+    path: 'folder',
+    loadChildren: () => import('./pages/folder/folder.module').then( m => m.FolderPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'order',
+    loadChildren: () => import('./pages/order/order-page/order-page.module').then( m => m.OrderPagePageModule)
   }
 ];
 

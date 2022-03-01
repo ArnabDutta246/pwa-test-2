@@ -1,0 +1,1595 @@
+<ion-header class="customIonHead">
+  <ion-toolbar class="purpleGradientBg">
+    <ion-row>
+      <ion-col size="9" class="logo titleBack">
+        <ion-icon name="chevron-back-outline"></ion-icon>Orders
+      </ion-col>
+      <ion-col size="1" class="ion-text-right">
+        <ion-icon class="headLightPurpleIcon" name="search-outline"></ion-icon>
+      </ion-col>
+      <ion-col size="1" class="ion-text-right">
+        <ion-icon class="headLightPurpleIcon" name="notifications-outline"></ion-icon>
+        <div class="notifyNo"></div>
+        <!-- <ion-badge color="warning" class="notifyNo">10</ion-badge> -->
+      </ion-col>
+      <ion-col size="1" class="ion-text-right">
+        <ion-buttons class="burgerMenuIcon">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="w-desk-50 p-0">
+    <ion-row>
+      <ion-col size="12" class="p-0">
+        <div class="customTabs whiteHeadTabs pt-56">
+          <ion-segment (ionChange)="segmentChanged($event)" value="allOrder">
+            <ion-segment-button value="allOrder">
+              <ion-label>All</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="activeOrder">
+              <ion-label>Active</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="deliveredOrder">
+              <ion-label>Delivered</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="lostOrder">
+              <ion-label>Missed</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="cancelledOrder">
+              <ion-label>Cancelled</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+          <!--@@@@@@@ Start All Order Tabs @@@@@@@-->
+          <div class="animate__animated animate__slideInUp animate__fast p-0 bgTransparent allOrderTabs"
+            *ngIf="segment === 'allOrder'">
+            <div class="customTabsItemBody">
+              <!-- Search Section -->
+              <ion-row class="w100 mb-9">
+                <ion-col size="11" class="p-0">
+                  <ion-searchbar class="searchBar" placeholder="Search by order id, email id and Txn id...">
+                  </ion-searchbar>
+                </ion-col>
+                <ion-col size="1" class="p-0">
+                  <ion-icon name="filter" class="filterSearch"></ion-icon>
+                </ion-col>
+              </ion-row>
+              <!-- / Search Section -->
+              <!-- Start Pending Orders slides Section -->
+              <div class="allOrderPending">
+                <div class="cardHeadCont allOrderCardHeadCont">
+                  <ion-row>
+                    <ion-col size="9" class="ion-text-left">
+                      <h3>Pending Orders<ion-badge class="titleBadgeNo purpleGradientBg">02</ion-badge>
+                      </h3>
+                    </ion-col>
+                    <ion-col size="3" class="ion-text-right"><a href="#" title="View All">View All</a>
+                    </ion-col>
+                  </ion-row>
+                </div>
+                <!--/-->
+                <ion-slides>
+                  <ion-slide class="customAllOrderSlide">
+                    <ion-card class="customCard m-0">
+                      <ion-card-header class="cardHeadCont pendingOrdHead">
+                        <ion-row>
+                          <ion-col size="7" class="ion-text-left">
+                            <h3>BPECOMOD20216482</h3>
+                            <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                          </ion-col>
+                          <ion-col size="5" class="ion-text-right">
+                            <p>
+                              <ion-icon name="time"></ion-icon>time remaining
+                            </p>
+                            <h5>2:06 mins</h5>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-header>
+                      <ion-card-content class="pLR-11 cardContentBody">
+                        <ion-row class="borderB">
+                          <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                            <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                            <div class="contPO">
+                              <p class="textBold">Contractor</p>
+                              <p>Aditya Narayan</p>
+                            </div>
+                          </ion-col>
+                          <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                            <ion-icon name="location"></ion-icon>
+                            <div class="contPO">
+                              <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                                Maharashra, IN</p>
+                            </div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col size="8" class="centerVStartH totalQuaOrder">
+                            <p>Total quantity ordered: <span class="textBold">20</span></p>
+                          </ion-col>
+                          <ion-col size="4" class="viewDetailArrow">
+                            <a class="centerVEndH" data-toggle="modal" data-target="#osvdp" title="View Details">
+                              <p>View Details</p>
+                              <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                            </a>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col size="6" class="ion-text-center">
+                            <ion-button class="customBtn redGradientBg" expand="block">
+                              <ion-icon name="close-circle-outline"></ion-icon>Reject Order
+                            </ion-button>
+                          </ion-col>
+                          <ion-col size="6" class="ion-text-center">
+                            <ion-button class="customBtn purpleGradientBg" expand="block">
+                              <ion-icon name="checkmark-circle-outline"></ion-icon>Accept Order
+                            </ion-button>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-slide>
+                  <ion-slide class="customAllOrderSlide">
+                    <ion-card class="customCard m-0">
+                      <ion-card-header class="cardHeadCont pendingOrdHead">
+                        <ion-row>
+                          <ion-col size="7" class="ion-text-left">
+                            <h3>BPECOMOD20216482</h3>
+                            <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                          </ion-col>
+                          <ion-col size="5" class="ion-text-right">
+                            <p>
+                              <ion-icon name="time"></ion-icon>time remaining
+                            </p>
+                            <h5>2:06 mins</h5>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-header>
+                      <ion-card-content class="pLR-11 cardContentBody">
+                        <ion-row class="borderB">
+                          <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                            <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                            <div class="contPO">
+                              <p class="textBold">Contractor</p>
+                              <p>Aditya Narayan</p>
+                            </div>
+                          </ion-col>
+                          <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                            <ion-icon name="location"></ion-icon>
+                            <div class="contPO">
+                              <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                                Maharashra, IN</p>
+                            </div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col size="8" class="centerVStartH totalQuaOrder">
+                            <p>Total quantity ordered: <span class="textBold">20</span></p>
+                          </ion-col>
+                          <ion-col size="4" class="viewDetailArrow">
+                            <a class="centerVEndH" data-toggle="modal" data-target="#osvdp" title="View Details">
+                              <p>View Details</p>
+                              <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                            </a>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col size="6" class="ion-text-center">
+                            <ion-button class="customBtn redGradientBg" expand="block">
+                              <ion-icon name="close-circle-outline"></ion-icon>Reject Order
+                            </ion-button>
+                          </ion-col>
+                          <ion-col size="6" class="ion-text-center">
+                            <ion-button class="customBtn purpleGradientBg" expand="block">
+                              <ion-icon name="checkmark-circle-outline"></ion-icon>Accept Order
+                            </ion-button>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-slide>
+                </ion-slides>
+              </div>
+              <!-- End Pending Orders slides Section -->
+              <!-- Start Active Orders slides Section -->
+              <div class="allOrderPending">
+                <div class="cardHeadCont allOrderCardHeadCont">
+                  <ion-row>
+                    <ion-col size="9" class="ion-text-left">
+                      <h3>Active orders<ion-badge class="titleBadgeNo purpleGradientBg">04</ion-badge>
+                      </h3>
+                    </ion-col>
+                    <ion-col size="3" class="ion-text-right"><a href="#" title="View All">View All</a>
+                    </ion-col>
+                  </ion-row>
+                </div>
+                <!--/-->
+                <ion-slides>
+                  <ion-slide class="customAllOrderSlide">
+                    <ion-card class="customCard m-0">
+                      <ion-card-header class="cardHeadCont pendingOrdHead">
+                        <ion-row>
+                          <ion-col size="7" class="ion-text-left">
+                            <h3>BPECOMOD20216482</h3>
+                            <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                          </ion-col>
+                          <ion-col size="5" class="ion-text-right">
+                            <p>
+                              <ion-icon name="time"></ion-icon>Order Placed at
+                            </p>
+                            <h5>20 Jan 2022, 7:32PM</h5>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-header>
+                      <ion-card-content class="pLR-11 cardContentBody">
+                        <ion-row class="borderB">
+                          <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                            <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                            <div class="contPO">
+                              <p class="textBold">Contractor</p>
+                              <p>Aditya Narayan</p>
+                            </div>
+                          </ion-col>
+                          <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                            <ion-icon name="location"></ion-icon>
+                            <div class="contPO">
+                              <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                                Maharashra, IN</p>
+                            </div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col size="8" class="centerVStartH totalQuaOrder">
+                            <p>Expected Delivery:<span class="textBold">24 January by 5PM</span></p>
+                          </ion-col>
+                          <ion-col size="4" class="viewDetailArrow">
+                            <a class="centerVEndH" data-toggle="modal" data-target="#osvdp" title="View Details">
+                              <p>View Details</p>
+                              <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                            </a>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-slide>
+                  <ion-slide class="customAllOrderSlide">
+                    <ion-card class="customCard m-0">
+                      <ion-card-header class="cardHeadCont pendingOrdHead">
+                        <ion-row>
+                          <ion-col size="7" class="ion-text-left">
+                            <h3>BPECOMOD20216482</h3>
+                            <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                          </ion-col>
+                          <ion-col size="5" class="ion-text-right">
+                            <p>
+                              <ion-icon name="time"></ion-icon>Order Placed at
+                            </p>
+                            <h5>20 Jan 2022, 7:32PM</h5>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-header>
+                      <ion-card-content class="pLR-11 cardContentBody">
+                        <ion-row class="borderB">
+                          <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                            <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                            <div class="contPO">
+                              <p class="textBold">Contractor</p>
+                              <p>Aditya Narayan</p>
+                            </div>
+                          </ion-col>
+                          <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                            <ion-icon name="location"></ion-icon>
+                            <div class="contPO">
+                              <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                                Maharashra, IN</p>
+                            </div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col size="8" class="centerVStartH totalQuaOrder">
+                            <p>Expected Delivery:<span class="textBold">24 January by 5PM</span></p>
+                          </ion-col>
+                          <ion-col size="4" class="viewDetailArrow">
+                            <a class="centerVEndH" data-toggle="modal" data-target="#osvdp" title="View Details">
+                              <p>View Details</p>
+                              <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                            </a>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-slide>
+                </ion-slides>
+              </div>
+              <!-- End Active Orders slides Section -->
+              <!-- Start Delivered orders slides Section -->
+              <div class="allOrderPending">
+                <div class="cardHeadCont allOrderCardHeadCont">
+                  <ion-row>
+                    <ion-col size="9" class="ion-text-left">
+                      <h3>Delivered orders<ion-badge class="titleBadgeNo purpleGradientBg">04</ion-badge>
+                      </h3>
+                    </ion-col>
+                    <ion-col size="3" class="ion-text-right"><a href="#" title="View All">View All</a>
+                    </ion-col>
+                  </ion-row>
+                </div>
+                <!--/-->
+                <ion-slides>
+                  <ion-slide class="customAllOrderSlide">
+                    <ion-card class="customCard m-0">
+                      <ion-card-header class="cardHeadCont pendingOrdHead">
+                        <ion-row>
+                          <ion-col size="7" class="ion-text-left">
+                            <h3>BPECOMOD20216482</h3>
+                            <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                          </ion-col>
+                          <ion-col size="5" class="ion-text-right">
+                            <p>
+                              <ion-icon name="time"></ion-icon>Order Placed at
+                            </p>
+                            <h5>20 Jan 2022, 7:32PM</h5>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-header>
+                      <ion-card-content class="pLR-11 cardContentBody">
+                        <ion-row class="borderB">
+                          <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                            <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                            <div class="contPO">
+                              <p class="textBold">Contractor</p>
+                              <p>Aditya Narayan</p>
+                            </div>
+                          </ion-col>
+                          <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                            <ion-icon name="location"></ion-icon>
+                            <div class="contPO">
+                              <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                                Maharashra, IN</p>
+                            </div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col size="8" class="centerVStartH totalQuaOrder">
+                            <p>Delivered on: <span class="textBold">24 January by 5PM</span></p>
+                          </ion-col>
+                          <ion-col size="4" class="viewDetailArrow">
+                            <a class="centerVEndH" data-toggle="modal" data-target="#osvdp" title="View Details">
+                              <p>View Details</p>
+                              <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                            </a>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-slide>
+                  <ion-slide class="customAllOrderSlide">
+                    <ion-card class="customCard m-0">
+                      <ion-card-header class="cardHeadCont pendingOrdHead">
+                        <ion-row>
+                          <ion-col size="7" class="ion-text-left">
+                            <h3>BPECOMOD20216482</h3>
+                            <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                          </ion-col>
+                          <ion-col size="5" class="ion-text-right">
+                            <p>
+                              <ion-icon name="time"></ion-icon>Order Placed at
+                            </p>
+                            <h5>20 Jan 2022, 7:32PM</h5>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-header>
+                      <ion-card-content class="pLR-11 cardContentBody">
+                        <ion-row class="borderB">
+                          <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                            <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                            <div class="contPO">
+                              <p class="textBold">Contractor</p>
+                              <p>Aditya Narayan</p>
+                            </div>
+                          </ion-col>
+                          <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                            <ion-icon name="location"></ion-icon>
+                            <div class="contPO">
+                              <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                                Maharashra, IN</p>
+                            </div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col size="8" class="centerVStartH totalQuaOrder">
+                            <p>Delivered on: <span class="textBold">24 January by 5PM</span></p>
+                          </ion-col>
+                          <ion-col size="4" class="viewDetailArrow">
+                            <a class="centerVEndH" data-toggle="modal" data-target="#osvdp" title="View Details">
+                              <p>View Details</p>
+                              <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                            </a>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-slide>
+                </ion-slides>
+              </div>
+              <!-- End Delivered orders slides Section -->
+              <!-- Start Lost orders slides Section -->
+              <div class="allOrderPending">
+                <div class="cardHeadCont allOrderCardHeadCont">
+                  <ion-row>
+                    <ion-col size="9" class="ion-text-left">
+                      <h3>Lost orders<ion-badge class="titleBadgeNo purpleGradientBg">04</ion-badge>
+                      </h3>
+                    </ion-col>
+                    <ion-col size="3" class="ion-text-right"><a href="#" title="View All">View All</a>
+                    </ion-col>
+                  </ion-row>
+                </div>
+                <!--/-->
+                <ion-slides>
+                  <ion-slide class="customAllOrderSlide">
+                    <ion-card class="customCard m-0">
+                      <ion-card-header class="cardHeadCont pendingOrdHead">
+                        <ion-row>
+                          <ion-col size="7" class="ion-text-left">
+                            <h3>BPECOMOD20216482</h3>
+                            <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                          </ion-col>
+                          <ion-col size="5" class="ion-text-right">
+                            <p>
+                              <ion-icon name="time"></ion-icon>Order Placed at
+                            </p>
+                            <h5>20 Jan 2022, 7:32PM</h5>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-header>
+                      <ion-card-content class="pLR-11 cardContentBody">
+                        <ion-row class="borderB">
+                          <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                            <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                            <div class="contPO">
+                              <p class="textBold">Contractor</p>
+                              <p>Aditya Narayan</p>
+                            </div>
+                          </ion-col>
+                          <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                            <ion-icon name="location"></ion-icon>
+                            <div class="contPO">
+                              <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                                Maharashra, IN</p>
+                            </div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col size="8" class="centerVStartH totalQuaOrder">
+                            <p>Lost Order Date: <span class="textBold">24 January</span></p>
+                          </ion-col>
+                          <ion-col size="4" class="viewDetailArrow">
+                            <a class="centerVEndH" data-toggle="modal" data-target="#osvdp" title="View Details">
+                              <p>View Details</p>
+                              <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                            </a>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-slide>
+                  <ion-slide class="customAllOrderSlide">
+                    <ion-card class="customCard m-0">
+                      <ion-card-header class="cardHeadCont pendingOrdHead">
+                        <ion-row>
+                          <ion-col size="7" class="ion-text-left">
+                            <h3>BPECOMOD20216482</h3>
+                            <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                          </ion-col>
+                          <ion-col size="5" class="ion-text-right">
+                            <p>
+                              <ion-icon name="time"></ion-icon>Order Placed at
+                            </p>
+                            <h5>20 Jan 2022, 7:32PM</h5>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-header>
+                      <ion-card-content class="pLR-11 cardContentBody">
+                        <ion-row class="borderB">
+                          <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                            <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                            <div class="contPO">
+                              <p class="textBold">Contractor</p>
+                              <p>Aditya Narayan</p>
+                            </div>
+                          </ion-col>
+                          <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                            <ion-icon name="location"></ion-icon>
+                            <div class="contPO">
+                              <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                                Maharashra, IN</p>
+                            </div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col size="8" class="centerVStartH totalQuaOrder">
+                            <p>Lost Order Date: <span class="textBold">24 January</span></p>
+                          </ion-col>
+                          <ion-col size="4" class="viewDetailArrow">
+                            <a class="centerVEndH" data-toggle="modal" data-target="#osvdp" title="View Details">
+                              <p>View Details</p>
+                              <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                            </a>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-slide>
+                </ion-slides>
+              </div>
+              <!-- End Lost orders slides Section -->
+              <!-- Start Cancelled orders slides Section -->
+              <div class="allOrderPending">
+                <div class="cardHeadCont allOrderCardHeadCont">
+                  <ion-row>
+                    <ion-col size="9" class="ion-text-left">
+                      <h3>Cancelled orders<ion-badge class="titleBadgeNo purpleGradientBg">04</ion-badge>
+                      </h3>
+                    </ion-col>
+                    <ion-col size="3" class="ion-text-right"><a href="#" title="View All">View All</a>
+                    </ion-col>
+                  </ion-row>
+                </div>
+                <!--/-->
+                <ion-slides>
+                  <ion-slide class="customAllOrderSlide">
+                    <ion-card class="customCard m-0">
+                      <ion-card-header class="cardHeadCont pendingOrdHead">
+                        <ion-row>
+                          <ion-col size="7" class="ion-text-left">
+                            <h3>BPECOMOD20216482</h3>
+                            <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                          </ion-col>
+                          <ion-col size="5" class="ion-text-right">
+                            <p>
+                              <ion-icon name="time"></ion-icon>Order Placed at
+                            </p>
+                            <h5>20 Jan 2022, 7:32PM</h5>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-header>
+                      <ion-card-content class="pLR-11 cardContentBody">
+                        <ion-row class="borderB">
+                          <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                            <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                            <div class="contPO">
+                              <p class="textBold">Contractor</p>
+                              <p>Aditya Narayan</p>
+                            </div>
+                          </ion-col>
+                          <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                            <ion-icon name="location"></ion-icon>
+                            <div class="contPO">
+                              <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                                Maharashra, IN</p>
+                            </div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col size="8" class="centerVStartH totalQuaOrder">
+                            <p>Cancelled Date: <span class="textBold">24 January</span></p>
+                          </ion-col>
+                          <ion-col size="4" class="viewDetailArrow">
+                            <a class="centerVEndH" data-toggle="modal" data-target="#osvdp" title="View Details">
+                              <p>View Details</p>
+                              <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                            </a>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-slide>
+                  <ion-slide class="customAllOrderSlide">
+                    <ion-card class="customCard m-0">
+                      <ion-card-header class="cardHeadCont pendingOrdHead">
+                        <ion-row>
+                          <ion-col size="7" class="ion-text-left">
+                            <h3>BPECOMOD20216482</h3>
+                            <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                          </ion-col>
+                          <ion-col size="5" class="ion-text-right">
+                            <p>
+                              <ion-icon name="time"></ion-icon>Order Placed at
+                            </p>
+                            <h5>20 Jan 2022, 7:32PM</h5>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-header>
+                      <ion-card-content class="pLR-11 cardContentBody">
+                        <ion-row class="borderB">
+                          <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                            <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                            <div class="contPO">
+                              <p class="textBold">Contractor</p>
+                              <p>Aditya Narayan</p>
+                            </div>
+                          </ion-col>
+                          <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                            <ion-icon name="location"></ion-icon>
+                            <div class="contPO">
+                              <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                                Maharashra, IN</p>
+                            </div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col size="8" class="centerVStartH totalQuaOrder">
+                            <p>Cancelled Date: <span class="textBold">24 January</span></p>
+                          </ion-col>
+                          <ion-col size="4" class="viewDetailArrow">
+                            <a class="centerVEndH" data-toggle="modal" data-target="#osvdp" title="View Details">
+                              <p>View Details</p>
+                              <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                            </a>
+                          </ion-col>
+                        </ion-row>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-slide>
+                </ion-slides>
+              </div>
+              <!-- End Cancelled orders slides Section -->
+            </div>
+          </div>
+          <!--@@@@@@@ / End All Order Tabs @@@@@@@-->
+          <!--@@@@@@@ Start Active Order Tabs @@@@@@@-->
+          <div class="animate__animated animate__slideInUp animate__fast p-0 bgTransparent"
+            *ngIf="segment === 'activeOrder'">
+            <div class="customTabsItemBody">
+              <!-- Search Section -->
+              <ion-row class="w100 mb-9">
+                <ion-col size="11" class="p-0">
+                  <ion-searchbar class="searchBar" placeholder="Search by order id, email id and Txn id...">
+                  </ion-searchbar>
+                </ion-col>
+                <ion-col size="1" class="p-0">
+                  <ion-icon name="filter" class="filterSearch"></ion-icon>
+                </ion-col>
+              </ion-row>
+              <!-- / Search Section -->
+              <!-- Start Active Orders slides Section -->
+              <div class="allOrderPending">
+                <div class="cardHeadCont allOrderCardHeadCont">
+                  <ion-row class="flexSpaceB">
+                    <ion-col size="8" class="ion-text-left">
+                      <h3>Active orders<ion-badge class="titleBadgeNo purpleGradientBg">04</ion-badge>
+                      </h3>
+                    </ion-col>
+                    <ion-col size="auto" class="ytdSelectView">
+                      <ion-list>
+                        <ion-item>
+                          <ion-label>Show:</ion-label>
+                          <ion-select value="l30days" class="pull-right">
+                            <ion-select-option value="l30days">Last 30 days</ion-select-option>
+                            <ion-select-option value="l60days">Last 60 days</ion-select-option>
+                          </ion-select>
+                        </ion-item>
+                      </ion-list>
+                    </ion-col>
+                  </ion-row>
+                </div>
+                <!--/-->
+                <ion-card class="customCard activeOrdercustomCard">
+                  <ion-card-header class="cardHeadCont pendingOrdHead">
+                    <ion-row>
+                      <ion-col size="7" class="ion-text-left">
+                        <h3>BPECOMOD20216482</h3>
+                        <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                      </ion-col>
+                      <ion-col size="5" class="ion-text-right">
+                        <p>
+                          <ion-icon name="time"></ion-icon>Order Placed at
+                        </p>
+                        <h5>20 Jan 2022, 7:32PM</h5>
+                      </ion-col>
+                    </ion-row>
+                  </ion-card-header>
+                  <ion-card-content class="cardContentBody p-0">
+                    <ion-row class="borderB pLR-11">
+                      <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                        <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                        <div class="contPO">
+                          <p class="textBold">Contractor</p>
+                          <p>Aditya Narayan</p>
+                        </div>
+                      </ion-col>
+                      <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                        <ion-icon name="location"></ion-icon>
+                        <div class="contPO">
+                          <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                            Maharashra, IN</p>
+                        </div>
+                      </ion-col>
+                    </ion-row>
+                    <ion-accordion-group class="customOrderAcco">
+                      <ion-accordion value="colors" toggle-icon="chevron-down-circle-outline">
+                        <ion-item slot="header" class="accoHeader">
+                          <ion-label class="totalQuaOrder">
+                            <p>Expected Delivery: <span class="textBold">24 January by 5PM</span></p>
+                          </ion-label>
+                        </ion-item>
+                        <div slot="content" class="accoBody">
+                          <div class="orderProcessByOneParent">
+                            <!-- Start Order Process By One -->
+                            <div class="orderProcessByOne">
+                              <div class="orderAlertDot"></div>
+                              <div class="processStatusTitleDate">
+                                <h3>Collect Payment</h3>
+                                <p>
+                                  <ion-icon name="calendar-clear-outline"></ion-icon>20 Jan 2022
+                                </p>
+                              </div>
+                              <div class="processAddress">
+                                <p>Ambegaon Pathar</p>
+                                <p>Dhankarwadi, Pune, Maharashra, IN</p>
+                              </div>
+                            </div>
+                            <div class="orderProcessByOne">
+                              <div class="orderAlertDot"></div>
+                              <div class="processStatusTitleDate">
+                                <h3>Collect Payment</h3>
+                                <p>
+                                  <ion-icon name="calendar-clear-outline"></ion-icon>20 Jan 2022
+                                </p>
+                              </div>
+                              <div class="processAddress">
+                                <p>Ambegaon Pathar</p>
+                                <p>Dhankarwadi, Pune, Maharashra, IN</p>
+                              </div>
+                            </div>
+                            <!-- End Order Process By One -->
+                          </div>
+                          <ion-row>
+                            <ion-col size="12" class="ion-text-center">
+                              <ion-button class="customBtn purpleGradientBg" expand="block">Proceed</ion-button>
+                            </ion-col>
+                          </ion-row>
+                          <ion-row>
+                            <ion-col size="12" class="ion-text-left orderProcessPendingList">
+                              <ul>
+                                <li>
+                                  <div class="pendingDots"></div>Generate Invoice
+                                </li>
+                                <li>
+                                  <div class="pendingDots"></div>Mark as Shipped
+                                </li>
+                                <li>
+                                  <div class="pendingDots"></div>Confirm Delivery
+                                </li>
+                              </ul>
+                            </ion-col>
+                          </ion-row>
+                        </div>
+                      </ion-accordion>
+                    </ion-accordion-group>
+                  </ion-card-content>
+                </ion-card>
+                <ion-card class="customCard activeOrdercustomCard">
+                  <ion-card-header class="cardHeadCont pendingOrdHead">
+                    <ion-row>
+                      <ion-col size="7" class="ion-text-left">
+                        <h3>BPECOMOD20216482</h3>
+                        <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                      </ion-col>
+                      <ion-col size="5" class="ion-text-right">
+                        <p>
+                          <ion-icon name="time"></ion-icon>Order Placed at
+                        </p>
+                        <h5>20 Jan 2022, 7:32PM</h5>
+                      </ion-col>
+                    </ion-row>
+                  </ion-card-header>
+                  <ion-card-content class="cardContentBody p-0">
+                    <ion-row class="borderB pLR-11">
+                      <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                        <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                        <div class="contPO">
+                          <p class="textBold">Contractor</p>
+                          <p>Aditya Narayan</p>
+                        </div>
+                      </ion-col>
+                      <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                        <ion-icon name="location"></ion-icon>
+                        <div class="contPO">
+                          <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                            Maharashra, IN</p>
+                        </div>
+                      </ion-col>
+                    </ion-row>
+                    <ion-accordion-group class="customOrderAcco">
+                      <ion-accordion value="colors" toggle-icon="chevron-down-circle-outline">
+                        <ion-item slot="header" class="accoHeader">
+                          <ion-label class="totalQuaOrder">
+                            <p>Expected Delivery: <span class="textBold">24 January by 5PM</span></p>
+                          </ion-label>
+                        </ion-item>
+                        <div slot="content" class="accoBody">
+                          <div class="orderProcessByOneParent">
+                            <!-- Start Order Process By One -->
+                            <div class="orderProcessByOne">
+                              <div class="orderAlertDot"></div>
+                              <div class="processStatusTitleDate">
+                                <h3>Collect Payment</h3>
+                                <p>
+                                  <ion-icon name="calendar-clear-outline"></ion-icon>20 Jan 2022
+                                </p>
+                              </div>
+                              <div class="processAddress">
+                                <p>Ambegaon Pathar</p>
+                                <p>Dhankarwadi, Pune, Maharashra, IN</p>
+                              </div>
+                            </div>
+                            <div class="orderProcessByOne">
+                              <div class="orderAlertDot"></div>
+                              <div class="processStatusTitleDate">
+                                <h3>Collect Payment</h3>
+                                <p>
+                                  <ion-icon name="calendar-clear-outline"></ion-icon>20 Jan 2022
+                                </p>
+                              </div>
+                              <div class="processAddress">
+                                <p>Ambegaon Pathar</p>
+                                <p>Dhankarwadi, Pune, Maharashra, IN</p>
+                              </div>
+                            </div>
+                            <!-- End Order Process By One -->
+                          </div>
+                          <ion-row>
+                            <ion-col size="12" class="ion-text-center">
+                              <ion-button class="customBtn purpleGradientBg" expand="block">Proceed</ion-button>
+                            </ion-col>
+                          </ion-row>
+                          <ion-row>
+                            <ion-col size="12" class="ion-text-left orderProcessPendingList">
+                              <ul>
+                                <li>
+                                  <div class="pendingDots"></div>Generate Invoice
+                                </li>
+                                <li>
+                                  <div class="pendingDots"></div>Mark as Shipped
+                                </li>
+                                <li>
+                                  <div class="pendingDots"></div>Confirm Delivery
+                                </li>
+                              </ul>
+                            </ion-col>
+                          </ion-row>
+                        </div>
+                      </ion-accordion>
+                    </ion-accordion-group>
+                  </ion-card-content>
+                </ion-card>
+              </div>
+              <!-- End Active Orders slides Section -->
+            </div>
+          </div>
+          <!--@@@@@@@ / End Active Order Tabs @@@@@@@-->
+          <!--@@@@@@@ Start Delivered Order Tabs @@@@@@@-->
+          <div class="animate__animated animate__slideInUp animate__fast p-0 bgTransparent"
+            *ngIf="segment === 'deliveredOrder'">
+            <div class="customTabsItemBody">
+              <!-- Search Section -->
+              <ion-row class="w100 mb-9">
+                <ion-col size="11" class="p-0">
+                  <ion-searchbar class="searchBar" placeholder="Search by order id, email id and Txn id...">
+                  </ion-searchbar>
+                </ion-col>
+                <ion-col size="1" class="p-0">
+                  <ion-icon name="filter" class="filterSearch"></ion-icon>
+                </ion-col>
+              </ion-row>
+              <!-- / Search Section -->
+              <!-- Start Active Orders slides Section -->
+              <div class="allOrderPending">
+                <div class="cardHeadCont allOrderCardHeadCont">
+                  <ion-row class="flexSpaceB">
+                    <ion-col size="8" class="ion-text-left">
+                      <h3>Delivered orders<ion-badge class="titleBadgeNo purpleGradientBg">04</ion-badge>
+                      </h3>
+                    </ion-col>
+                    <ion-col size="auto" class="ytdSelectView">
+                      <ion-list>
+                        <ion-item>
+                          <ion-label>Show:</ion-label>
+                          <ion-select value="l30days" class="pull-right">
+                            <ion-select-option value="l30days">Last 30 days</ion-select-option>
+                            <ion-select-option value="l60days">Last 60 days</ion-select-option>
+                          </ion-select>
+                        </ion-item>
+                      </ion-list>
+                    </ion-col>
+                  </ion-row>
+                </div>
+                <!--/-->
+                <ion-card class="customCard activeOrdercustomCard">
+                  <ion-card-header class="cardHeadCont pendingOrdHead">
+                    <ion-row>
+                      <ion-col size="7" class="ion-text-left">
+                        <h3>BPECOMOD20216482</h3>
+                        <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                      </ion-col>
+                      <ion-col size="5" class="ion-text-right">
+                        <p>
+                          <ion-icon name="time"></ion-icon>Order Placed at
+                        </p>
+                        <h5>20 Jan 2022, 7:32PM</h5>
+                      </ion-col>
+                    </ion-row>
+                  </ion-card-header>
+                  <ion-card-content class="cardContentBody p-0">
+                    <ion-row class="borderB pLR-11">
+                      <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                        <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                        <div class="contPO">
+                          <p class="textBold">Contractor</p>
+                          <p>Aditya Narayan</p>
+                        </div>
+                      </ion-col>
+                      <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                        <ion-icon name="location"></ion-icon>
+                        <div class="contPO">
+                          <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                            Maharashra, IN</p>
+                        </div>
+                      </ion-col>
+                    </ion-row>
+                    <ion-accordion-group class="customOrderAcco">
+                      <ion-accordion value="colors" toggle-icon="chevron-down-circle-outline">
+                        <ion-item slot="header" class="accoHeader">
+                          <ion-label class="totalQuaOrder">
+                            <p>Delivered on: <span class="textBold">24 January by 5PM</span></p>
+                          </ion-label>
+                        </ion-item>
+                        <div slot="content" class="accoBody">
+                          <div class="orderProcessByOneParent">
+                            <!-- Start Order Process By One -->
+                            <div class="orderProcessByOne dotBlueOPBO">
+                              <div class="orderAlertDot"></div>
+                              <div class="processStatusTitleDate">
+                                <h3>Collect Payment</h3>
+                                <p>
+                                  <ion-icon name="calendar-clear-outline"></ion-icon>20 Jan 2022
+                                </p>
+                              </div>
+                              <div class="processAddress">
+                                <p>Ambegaon Pathar</p>
+                                <p>Dhankarwadi, Pune, Maharashra, IN</p>
+                              </div>
+                            </div>
+                            <div class="orderProcessByOne dotBlueOPBO">
+                              <div class="orderAlertDot"></div>
+                              <div class="processStatusTitleDate">
+                                <h3>Prepare Order</h3>
+                                <p>
+                                  <ion-icon name="calendar-clear-outline"></ion-icon>20 Jan 2022
+                                </p>
+                              </div>
+                              <div class="processAddress">
+                                <p>Ambegaon Pathar</p>
+                                <p>Dhankarwadi, Pune, Maharashra, IN</p>
+                              </div>
+                              <a title="View Item Details" class="orderViewItemDetails">View Item Details</a>
+                            </div>
+                            <div class="orderProcessByOne dotBlueOPBO">
+                              <div class="orderAlertDot"></div>
+                              <div class="processStatusTitleDate">
+                                <h3>Generate Invoice</h3>
+                                <p>
+                                  <ion-icon name="calendar-clear-outline"></ion-icon>20 Jan 2022
+                                </p>
+                              </div>
+                              <div class="processAddress">
+                                <p>Ambegaon Pathar</p>
+                                <p>Dhankarwadi, Pune, Maharashra, IN</p>
+                              </div>
+                            </div>
+                            <div class="orderProcessByOne dotBlueOPBO">
+                              <div class="orderAlertDot"></div>
+                              <div class="processStatusTitleDate">
+                                <h3>Mark as Shipped</h3>
+                                <p>
+                                  <ion-icon name="calendar-clear-outline"></ion-icon>20 Jan 2022
+                                </p>
+                              </div>
+                              <div class="processAddress">
+                                <p>Ambegaon Pathar</p>
+                                <p>Dhankarwadi, Pune, Maharashra, IN</p>
+                              </div>
+                            </div>
+                            <div class="orderProcessByOne dotBlueOPBO">
+                              <div class="orderAlertDot"></div>
+                              <div class="processStatusTitleDate">
+                                <h3>Confirm Delivery</h3>
+                                <p>
+                                  <ion-icon name="calendar-clear-outline"></ion-icon>20 Jan 2022
+                                </p>
+                              </div>
+                              <div class="processAddress">
+                                <p>Ambegaon Pathar</p>
+                                <p>Dhankarwadi, Pune, Maharashra, IN</p>
+                              </div>
+                            </div>
+                            <!-- End Order Process By One -->
+                          </div>
+                        </div>
+                      </ion-accordion>
+                    </ion-accordion-group>
+                  </ion-card-content>
+                </ion-card>
+              </div>
+              <!-- End Active Orders slides Section -->
+            </div>
+          </div>
+          <!--@@@@@@@ / End Delivered Order Tabs @@@@@@@-->
+          <!--@@@@@@@ Start Lost Order Tabs @@@@@@@-->
+          <div class="animate__animated animate__slideInUp animate__fast p-0 bgTransparent"
+            *ngIf="segment === 'lostOrder'">
+            <div class="customTabsItemBody">
+              <!-- Search Section -->
+              <ion-row class="w100 mb-9">
+                <ion-col size="11" class="p-0">
+                  <ion-searchbar class="searchBar" placeholder="Search by order id, email id and Txn id...">
+                  </ion-searchbar>
+                </ion-col>
+                <ion-col size="1" class="p-0">
+                  <ion-icon name="filter" class="filterSearch"></ion-icon>
+                </ion-col>
+              </ion-row>
+              <!-- / Search Section -->
+              <!-- Start Active Orders slides Section -->
+              <div class="allOrderPending">
+                <div class="cardHeadCont allOrderCardHeadCont">
+                  <ion-row class="flexSpaceB">
+                    <ion-col size="8" class="ion-text-left">
+                      <h3>Lost orders<ion-badge class="titleBadgeNo purpleGradientBg">04</ion-badge>
+                      </h3>
+                    </ion-col>
+                    <ion-col size="auto" class="ytdSelectView">
+                      <ion-list>
+                        <ion-item>
+                          <ion-label>Show:</ion-label>
+                          <ion-select value="l30days" class="pull-right">
+                            <ion-select-option value="l30days">Last 30 days</ion-select-option>
+                            <ion-select-option value="l60days">Last 60 days</ion-select-option>
+                          </ion-select>
+                        </ion-item>
+                      </ion-list>
+                    </ion-col>
+                  </ion-row>
+                </div>
+                <!--/-->
+                <ion-card class="customCard activeOrdercustomCard">
+                  <ion-card-header class="cardHeadCont pendingOrdHead">
+                    <ion-row>
+                      <ion-col size="7" class="ion-text-left">
+                        <h3>BPECOMOD20216482</h3>
+                        <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                      </ion-col>
+                      <ion-col size="5" class="ion-text-right">
+                        <p>
+                          <ion-icon name="time"></ion-icon>Order Placed at
+                        </p>
+                        <h5>20 Jan 2022, 7:32PM</h5>
+                      </ion-col>
+                    </ion-row>
+                  </ion-card-header>
+                  <ion-card-content class="cardContentBody p-0">
+                    <ion-row class="borderB pLR-11">
+                      <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                        <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                        <div class="contPO">
+                          <p class="textBold">Contractor</p>
+                          <p>Aditya Narayan</p>
+                        </div>
+                      </ion-col>
+                      <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                        <ion-icon name="location"></ion-icon>
+                        <div class="contPO">
+                          <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                            Maharashra, IN</p>
+                        </div>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col size="12">
+                        <ion-item class="accoHeader">
+                          <ion-label class="totalQuaOrder">
+                            <p>Lost Order Date: <span class="textBold">24 January by 5PM</span></p>
+                          </ion-label>
+                        </ion-item>
+                      </ion-col>
+                    </ion-row>
+                  </ion-card-content>
+                </ion-card>
+              </div>
+              <!-- End Active Orders slides Section -->
+            </div>
+          </div>
+          <!--@@@@@@@ / End Lost Order Tabs @@@@@@@-->
+          <!--@@@@@@@ Start Cancelled Order Tabs @@@@@@@-->
+          <div class="animate__animated animate__slideInUp animate__fast p-0 bgTransparent"
+            *ngIf="segment === 'cancelledOrder'">
+            <div class="customTabsItemBody">
+              <!-- Search Section -->
+              <ion-row class="w100 mb-9">
+                <ion-col size="11" class="p-0">
+                  <ion-searchbar class="searchBar" placeholder="Search by order id, email id and Txn id...">
+                  </ion-searchbar>
+                </ion-col>
+                <ion-col size="1" class="p-0">
+                  <ion-icon name="filter" class="filterSearch"></ion-icon>
+                </ion-col>
+              </ion-row>
+              <!-- / Search Section -->
+              <!-- Start Active Orders slides Section -->
+              <div class="allOrderPending">
+                <div class="cardHeadCont allOrderCardHeadCont">
+                  <ion-row class="flexSpaceB">
+                    <ion-col size="8" class="ion-text-left">
+                      <h3>Cancelled orders<ion-badge class="titleBadgeNo purpleGradientBg">04</ion-badge>
+                      </h3>
+                    </ion-col>
+                    <ion-col size="auto" class="ytdSelectView">
+                      <ion-list>
+                        <ion-item>
+                          <ion-label>Show:</ion-label>
+                          <ion-select value="l30days" class="pull-right">
+                            <ion-select-option value="l30days">Last 30 days</ion-select-option>
+                            <ion-select-option value="l60days">Last 60 days</ion-select-option>
+                          </ion-select>
+                        </ion-item>
+                      </ion-list>
+                    </ion-col>
+                  </ion-row>
+                </div>
+                <!--/-->
+                <ion-card class="customCard activeOrdercustomCard">
+                  <ion-card-header class="cardHeadCont pendingOrdHead">
+                    <ion-row>
+                      <ion-col size="7" class="ion-text-left">
+                        <h3>BPECOMOD20216482</h3>
+                        <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                      </ion-col>
+                      <ion-col size="5" class="ion-text-right">
+                        <p>
+                          <ion-icon name="time"></ion-icon>Order Placed at
+                        </p>
+                        <h5>20 Jan 2022, 7:32PM</h5>
+                      </ion-col>
+                    </ion-row>
+                  </ion-card-header>
+                  <ion-card-content class="cardContentBody p-0">
+                    <ion-row class="borderB pLR-11">
+                      <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                        <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                        <div class="contPO">
+                          <p class="textBold">Contractor</p>
+                          <p>Aditya Narayan</p>
+                        </div>
+                      </ion-col>
+                      <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                        <ion-icon name="location"></ion-icon>
+                        <div class="contPO">
+                          <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                            Maharashra, IN</p>
+                        </div>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col size="12">
+                        <ion-item class="accoHeader">
+                          <ion-label class="totalQuaOrder">
+                            <p>Cancelled Date: <span class="textBold">24 January by 5PM</span></p>
+                          </ion-label>
+                        </ion-item>
+                      </ion-col>
+                    </ion-row>
+                  </ion-card-content>
+                </ion-card>
+              </div>
+              <!-- End Active Orders slides Section -->
+            </div>
+          </div>
+          <!--@@@@@@@ / End Cancelled Order Tabs @@@@@@@-->
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- ((((((((((((((All Order Modal Popup link Button))))))))))))) -->
+  <button type="button" class="btn btn-primary mb-9" data-toggle="modal" data-target="#aocpp">Active orders_Collect
+    payment_popup</button>
+  <button type="button" class="btn btn-primary mb-9" data-toggle="modal" data-target="#aopop">Active orders_Prepare
+    order popup</button>
+  <button type="button" class="btn btn-primary mb-9" data-toggle="modal" data-target="#aogip">Active orders_Generate
+    invoice
+    popup</button>
+  <button type="button" class="btn btn-primary mb-9" data-toggle="modal" data-target="#aomasp">Active orders_mark as
+    shipped popup</button>
+  <button type="button" class="btn btn-primary mb-9" data-toggle="modal" data-target="#aocdp">Active orders_Complete
+    delivery popup</button>
+  <!-- / ((((((((((((((All Order Modal Popup link Button))))))))))))) -->
+</ion-content>
+
+<!-- ((((((((((((((All Order Modal Popup))))))))))))) -->
+<!-- Orders Slide View Details Popup -->
+<div class="modal fade customModal" id="osvdp" data-backdrop="false">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">View Details</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ion-row>
+          <ion-col size="12">
+            <div class="table-responsive customBostTable dbPOAccoTable">
+              <table class="table table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>Name of the Item</th>
+                    <th class="ion-text-center">Ordered Quantity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Rangoli Total Care (Asystasia- 6T20310, 20Litre) -
+                      ASYSTASIA-6T20310|20Litre</td>
+                    <td class="ion-text-center">09</td>
+                  </tr>
+                  <tr>
+                    <td>Rangoli Total Care (Asystasia- 6T20310, 20Litre) -
+                      ASYSTASIA-6T20310|20Litre</td>
+                    <td class="ion-text-center">09</td>
+                  </tr>
+                  <tr>
+                    <td>Rangoli Total Care (Asystasia- 6T20310, 20Litre) -
+                      ASYSTASIA-6T20310|20Litre</td>
+                    <td class="ion-text-center">09</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / Orders Slide View Details Popup -->
+<div class="modal fade customModal" id="aocpp" data-backdrop="false">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Payment Details</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ion-row>
+          <ion-col size="12" class="modal-form-group">
+            <ion-label>Order Number</ion-label>
+            <p class="readOnlyValuNo">BPECOMOD20216482</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="modal-form-group">
+            <ion-label>Amount</ion-label>
+            <p class="readOnlyAmount"><i class="fa fa-inr"></i>7,281.50</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="modal-form-group">
+            <ion-label>Payment mode</ion-label>
+            <ion-select value="cash">
+              <ion-select-option value="cash">Cash</ion-select-option>
+              <ion-select-option value="online">Online</ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="modal-form-group">
+            <ion-label>Reference ID</ion-label>
+            <ion-input value="123456789"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="ion-text-center">
+            <ion-button class="customBtn purpleGradientBg" expand="block">
+              <ion-icon name="checkmark-circle-outline"></ion-icon>Create Transaction
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / Active orders_Collect payment_popup -->
+<!-- Active orders_Prepare order popup -->
+<div class="modal fade customModal" id="aopop" data-backdrop="false">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Payment Details</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ion-row>
+          <ion-col size="12">
+            <div class="popTitleShare">
+              <h2>Order Number: <span>BPECOMOD20216499</span></h2>
+              <ion-icon name="share-social-sharp"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <div class="table-responsive customBostTable popTableView">
+              <table class="table table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>Name of the Item</th>
+                    <th class="ion-text-center">Ordered Quantity</th>
+                    <th class="ion-text-center">Fulfilled Quantity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Rangoli Total Care (Asystasia- 6T20310, 20Litre) -
+                      ASYSTASIA-6T20310|20Litre</td>
+                    <td class="ion-text-center">09</td>
+                    <td class="ion-text-center">
+                      <div class="plusMInusInputNoBtn">
+                        <div class="input-group">
+                          <span class="input-group-btn">
+                            <button type="button" class="btn btnMinus" data-type="minus">
+                              <ion-icon name="remove-sharp"></ion-icon>
+                            </button>
+                          </span>
+                          <input type="text" class="form-control" value="0" min="1" max="100">
+                          <span class="input-group-btn">
+                            <button type="button" class="btn btnPlus" data-type="plus">
+                              <ion-icon name="add-sharp"></ion-icon>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Rangoli Total Care (Asystasia- 6T20310, 20Litre) -
+                      ASYSTASIA-6T20310|20Litre</td>
+                    <td class="ion-text-center">09</td>
+                    <td class="ion-text-center">
+                      <div class="plusMInusInputNoBtn">
+                        <div class="input-group">
+                          <span class="input-group-btn">
+                            <button type="button" class="btn btnMinus" data-type="minus">
+                              <ion-icon name="remove-sharp"></ion-icon>
+                            </button>
+                          </span>
+                          <input type="text" class="form-control" value="0" min="1" max="100">
+                          <span class="input-group-btn">
+                            <button type="button" class="btn btnPlus" data-type="plus">
+                              <ion-icon name="add-sharp"></ion-icon>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="ion-text-center">
+            <div class="popTableTotal">
+              <p class="darkPurpleText">Total Quantity:</p>
+              <p>34</p>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6" class="ion-text-center">
+            <ion-button class="customBtn redGradientBg" expand="block">
+              <ion-icon name="close-circle-outline"></ion-icon>Cancel Order
+            </ion-button>
+          </ion-col>
+          <ion-col size="6" class="ion-text-center">
+            <ion-button class="customBtn purpleGradientBg" expand="block">
+              <ion-icon name="checkmark-circle-outline"></ion-icon>Prepare Order
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / Active orders_Prepare order popup -->
+<!-- Active orders_Generate invoice popup -->
+<div class="modal fade customModal" id="aogip" data-backdrop="false">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Generate Invoice</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ion-row>
+          <ion-col size="12" class="modal-form-group">
+            <ion-label>Order Number</ion-label>
+            <p class="readOnlyValuNo">BPECOMOD20216482</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="modal-form-group">
+            <ion-label>Amount</ion-label>
+            <p class="readOnlyAmount"><i class="fa fa-inr"></i>7,281.50</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="modal-form-group">
+            <ion-label>Invoice Number</ion-label>
+            <ion-input value="1234597896045"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="modal-form-group">
+            <ion-label>Date of Invoice</ion-label>
+            <!-- <ion-datetime value="2012-12-15T13:47:20.789" displayFormat="DD-MMM-YYYY"></ion-datetime> -->
+            <input type="date" value="2012-12-15T13:47:20.789" displayFormat="DD-MMM-YYYY">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="docAttachArea">
+            <ion-label class="attachTextIcon">
+              <ion-icon name="attach-outline"></ion-icon>Attachments
+            </ion-label>
+            <ul>
+              <li>
+                <p>01Bill_24.02.2022.jpeg</p>
+                <ion-icon name="close-circle-sharp"></ion-icon>
+              </li>
+              <li>
+                <p>01Bill_24.02.2022.jpeg</p>
+                <ion-icon name="close-circle-sharp"></ion-icon>
+              </li>
+            </ul>
+            <div class="addDocOption">
+              <p>Add Document</p>
+              <ion-icon name="add-circle-sharp"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="ion-text-center">
+            <ion-button class="customBtn redGradientBg" expand="block">Upload Copy</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="ion-text-center">
+            <ion-button class="customBtn purpleGradientBg disabledBtn" expand="block">Generate Invoice</ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / Active orders_Generate invoice popup -->
+<!-- Active orders_mark as shipped popup -->
+<div class="modal fade customModal" id="aomasp" data-backdrop="false">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Mark as Shipped</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ion-row>
+          <ion-col size="12" class="modal-form-group">
+            <ion-label>Order Number</ion-label>
+            <p class="readOnlyValuNo">BPECOMOD20216482</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="modal-form-group">
+            <ion-label>Phone Number of the Delivery Person</ion-label>
+            <ion-input value="+91 98045000000"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="infoTextIcon">
+            <ion-icon name="information-circle-sharp"></ion-icon>
+            <p>by clicking submit you are agreeing to share your contact details to the buyer.</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="ion-text-center">
+            <ion-button class="customBtn purpleGradientBg" expand="block">
+              <ion-icon name="checkmark-circle-outline"></ion-icon>Mark as Shipped
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / Active orders_mark as shipped popup -->
+<!-- Active orders_Complete delivery popup -->
+<div class="modal fade customModal" id="aocdp" data-backdrop="false">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Confirm Delivery</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ion-row>
+          <ion-col size="12" class="modal-form-group">
+            <ion-label>Order Number</ion-label>
+            <p class="readOnlyValuNo">BPECOMOD20216482</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="verifyOTPArea">
+            <h3>Verify OTP</h3>
+            <div class="verifyOTPField">
+              <ion-row>
+                <ion-col size="12" class="modal-form-group">
+                  <ion-label>Contact Number</ion-label>
+                  <div class="otpInputArea">
+                    <ion-input value="+91 980700 0000"></ion-input>
+                    <ion-button>Send OTP</ion-button>
+                  </div>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12" class="modal-form-group">
+                  <ion-label>Enter Buyer's OTP</ion-label>
+                  <div class="otpInputArea">
+                    <div class="afterOTPChecked">
+                      <ion-input value="125480" minlength="6" maxlength="6"></ion-input>
+                      <ion-icon class="otpCheck" name="checkmark-circle-sharp"></ion-icon>
+                      <ion-icon class="otpClose" name="close-circle-sharp" style="display: none;"></ion-icon>
+                    </div>
+                    <ion-icon name="information-circle-sharp"></ion-icon>
+                    <ion-button>Re-Send OTP</ion-button>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="ion-text-center">
+            <ion-button class="customBtn purpleGradientBg disabledBtn" expand="block">
+              <ion-icon name="checkmark-circle-outline"></ion-icon>Complete Order
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / Active orders_Complete delivery popup -->
+<!-- / ((((((((((((((All Order Modal Popup))))))))))))) -->

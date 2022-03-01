@@ -1,0 +1,597 @@
+<ion-header class="customIonHead">
+    <ion-toolbar class="purpleGradientBg">
+        <ion-row>
+            <ion-col size="9" class="logo titleBack">
+                <img src="../../assets/img/logo.png" alt="Logo">
+            </ion-col>
+            <ion-col size="1" class="ion-text-right">
+                <ion-icon class="headLightPurpleIcon" name="search-outline"></ion-icon>
+            </ion-col>
+            <ion-col size="1" class="ion-text-right">
+                <ion-icon class="headLightPurpleIcon" name="notifications-outline"></ion-icon>
+                <div class="notifyNo"></div>
+                <!-- <ion-badge color="warning" class="notifyNo">10</ion-badge> -->
+            </ion-col>
+            <ion-col size="1" class="ion-text-right">
+                <ion-buttons class="burgerMenuIcon">
+                    <ion-menu-button></ion-menu-button>
+                </ion-buttons>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <!-- ======  [ Please remove later ] -->
+    <div style="background-color:var(--ion-color-warning);" (click)="addToHomeScreen()">
+        <ion-text color="dark">
+            <p class="ion-no-margin ion-text-center"></p>
+        </ion-text>
+    </div>
+    <!-- ======  [ Please remove later ] -->
+    <ion-grid class="w-desk-50 p-0">
+        <ion-row>
+            <ion-col size="12" class="p-0">
+                <!-- Start Pending Orders Section -->
+                <div class="darkPurple pendingOrdBg bodypadding pt-56">
+                    <div class="cardHeadCont customParentPOTitel">
+                        <ion-row>
+                            <ion-col size="12" class="ion-text-left">
+                                <h3>Pending Orders<ion-badge class="titleBadgeNo purpleGradientBg">02</ion-badge>
+                                </h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                    <!--/-->
+                    <ion-card class="customCard">
+                        <ion-card-header class="cardHeadCont pendingOrdHead">
+                            <ion-row>
+                                <ion-col size="7" class="ion-text-left">
+                                    <h3>BPECOMOD20216482</h3>
+                                    <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                                </ion-col>
+                                <ion-col size="5" class="ion-text-right">
+                                    <p>
+                                        <ion-icon name="time"></ion-icon>time remaining
+                                    </p>
+                                    <h5>2:06 mins</h5>
+                                </ion-col>
+                            </ion-row>
+                        </ion-card-header>
+                        <ion-card-content class="cardContentBody p-0">
+                            <ion-row class="borderB pLR-11">
+                                <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                                    <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                                    <div class="contPO">
+                                        <p class="textBold">Contractor</p>
+                                        <p>Aditya Narayan</p>
+                                    </div>
+                                </ion-col>
+                                <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                                    <ion-icon name="location"></ion-icon>
+                                    <div class="contPO">
+                                        <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                                            Maharashra, IN</p>
+                                    </div>
+                                </ion-col>
+                            </ion-row>
+                            <!-- DB Pending Orders View Details -->
+                            <ion-accordion-group class="customOrderAcco">
+                                <ion-accordion value="colors" toggle-icon="chevron-down-circle-outline">
+                                    <ion-item slot="header" class="accoHeader dbPOAccoHeader">
+                                        <ion-label class="totalQuaOrder">
+                                            <p>Total quantity ordered: <span class="textBold">20</span></p>
+                                        </ion-label>
+                                    </ion-item>
+                                    <div slot="content" class="accoBodyTwo">
+                                        <div class="table-responsive customBostTable dbPOAccoTable">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th>Name of the Item</th>
+                                                        <th class="ion-text-center">Ordered Quantity</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Rangoli Total Care (Asystasia- 6T20310, 20Litre) -
+                                                            ASYSTASIA-6T20310|20Litre</td>
+                                                        <td class="ion-text-center">09</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Rangoli Total Care (Asystasia- 6T20310, 20Litre) -
+                                                            ASYSTASIA-6T20310|20Litre</td>
+                                                        <td class="ion-text-center">09</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Rangoli Total Care (Asystasia- 6T20310, 20Litre) -
+                                                            ASYSTASIA-6T20310|20Litre</td>
+                                                        <td class="ion-text-center">09</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </ion-accordion>
+                            </ion-accordion-group>
+                            <!-- / DB Pending Orders View Details -->
+                            <ion-row class="pLR-11">
+                                <ion-col size="6" class="ion-text-center">
+                                    <ion-button class="customBtn redGradientBg" expand="block">
+                                        <ion-icon name="close-circle-outline"></ion-icon>Reject Order
+                                    </ion-button>
+                                </ion-col>
+                                <ion-col size="6" class="ion-text-center">
+                                    <ion-button class="customBtn purpleGradientBg" expand="block">
+                                        <ion-icon name="checkmark-circle-outline"></ion-icon>Accept Order
+                                    </ion-button>
+                                </ion-col>
+                            </ion-row>
+                        </ion-card-content>
+                    </ion-card>
+                    <ion-card class="customCard">
+                        <ion-card-header class="cardHeadCont pendingOrdHead">
+                            <ion-row>
+                                <ion-col size="7" class="ion-text-left">
+                                    <h3>BPECOMOD20216482</h3>
+                                    <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                                </ion-col>
+                                <ion-col size="5" class="ion-text-right">
+                                    <p>
+                                        <ion-icon name="time"></ion-icon>time remaining
+                                    </p>
+                                    <h5>2:06 mins</h5>
+                                </ion-col>
+                            </ion-row>
+                        </ion-card-header>
+                        <ion-card-content class="cardContentBody p-0">
+                            <ion-row class="borderB pLR-11">
+                                <ion-col size="5" class="ion-text-left pendingOrdDetails">
+                                    <img class="avatarPO" src="../../assets/img/img_avatar.png" alt="img">
+                                    <div class="contPO">
+                                        <p class="textBold">Contractor</p>
+                                        <p>Aditya Narayan</p>
+                                    </div>
+                                </ion-col>
+                                <ion-col size="7" class="ion-text-left pendingOrdDetails">
+                                    <ion-icon name="location"></ion-icon>
+                                    <div class="contPO">
+                                        <p><span class="textBold">Address:</span> Ambegaon Pathar Dhankarwadi, Pune,
+                                            Maharashra, IN</p>
+                                    </div>
+                                </ion-col>
+                            </ion-row>
+                            <!-- DB Pending Orders View Details -->
+                            <ion-accordion-group class="customOrderAcco">
+                                <ion-accordion value="colors" toggle-icon="chevron-down-circle-outline">
+                                    <ion-item slot="header" class="accoHeader dbPOAccoHeader">
+                                        <ion-label class="totalQuaOrder">
+                                            <p>Total quantity ordered: <span class="textBold">20</span></p>
+                                        </ion-label>
+                                    </ion-item>
+                                    <div slot="content" class="accoBodyTwo">
+                                        <div class="table-responsive customBostTable dbPOAccoTable">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th>Name of the Item</th>
+                                                        <th class="ion-text-center">Ordered Quantity</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Rangoli Total Care (Asystasia- 6T20310, 20Litre) -
+                                                            ASYSTASIA-6T20310|20Litre</td>
+                                                        <td class="ion-text-center">09</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Rangoli Total Care (Asystasia- 6T20310, 20Litre) -
+                                                            ASYSTASIA-6T20310|20Litre</td>
+                                                        <td class="ion-text-center">09</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Rangoli Total Care (Asystasia- 6T20310, 20Litre) -
+                                                            ASYSTASIA-6T20310|20Litre</td>
+                                                        <td class="ion-text-center">09</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </ion-accordion>
+                            </ion-accordion-group>
+                            <!-- / DB Pending Orders View Details -->
+                            <ion-row class="pLR-11">
+                                <ion-col size="6" class="ion-text-center">
+                                    <ion-button class="customBtn redGradientBg" expand="block">
+                                        <ion-icon name="close-circle-outline"></ion-icon>Reject Order
+                                    </ion-button>
+                                </ion-col>
+                                <ion-col size="6" class="ion-text-center">
+                                    <ion-button class="customBtn purpleGradientBg" expand="block">
+                                        <ion-icon name="checkmark-circle-outline"></ion-icon>Accept Order
+                                    </ion-button>
+                                </ion-col>
+                            </ion-row>
+                        </ion-card-content>
+                    </ion-card>
+                    <div class="clear"></div>
+                </div>
+                <!-- End Pending Orders Section -->
+                <div class="bodypadding">
+                    <!-- Start Overview Filter Section -->
+                    <div class="cardHeadCont customParentTitel">
+                        <ion-row class="flexSpaceB">
+                            <ion-col size="8" class="ion-text-left">
+                                <h3>Overview</h3>
+                            </ion-col>
+                            <ion-col size="4" class="ytdSelectView">
+                                <ion-list>
+                                    <ion-item>
+                                        <ion-label>Show:</ion-label>
+                                        <ion-select value="l30days" class="pull-right">
+                                            <ion-select-option value="l30days">Last 30 days</ion-select-option>
+                                            <ion-select-option value="l60days">Last 60 days</ion-select-option>
+                                        </ion-select>
+                                    </ion-item>
+                                </ion-list>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                    <!-- End Overview Filter Section -->
+                    <!-- Start Quick Pending Actions -->
+                    <ion-card class="customCard">
+                        <ion-card-header class="cardHeadCont">
+                            <ion-row>
+                                <ion-col size="12" class="ion-text-left">
+                                    <h3>Quick Pending Actions<ion-badge class="titleBadgeNo purpleGradientBg">21
+                                        </ion-badge>
+                                    </h3>
+                                </ion-col>
+                            </ion-row>
+                        </ion-card-header>
+                        <ion-card-content class="p-0 cardContentBody">
+                            <ion-row class="headQPA">
+                                <ion-col size="9" class="ion-text-left">Recent Orders</ion-col>
+                                <ion-col size="2" class="ion-text-left">Total</ion-col>
+                                <ion-col size="1" class="ion-text-left"></ion-col>
+                            </ion-row>
+                            <ion-list class="p-0">
+                                <ion-item class="bodyQPA">
+                                    <ion-row>
+                                        <ion-col size="9" class="ion-text-left">Payment Collected</ion-col>
+                                        <ion-col size="2" class="ion-text-left textBold">05</ion-col>
+                                        <ion-col size="1" class="centerVEndH">
+                                            <ion-icon name="chevron-forward"></ion-icon>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-item>
+                                <ion-item class="bodyQPA">
+                                    <ion-row>
+                                        <ion-col size="9" class="ion-text-left">Prepare Order</ion-col>
+                                        <ion-col size="2" class="ion-text-left textBold">03</ion-col>
+                                        <ion-col size="1" class="centerVEndH">
+                                            <ion-icon name="chevron-forward"></ion-icon>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-item>
+                                <ion-item class="bodyQPA">
+                                    <ion-row>
+                                        <ion-col size="9" class="ion-text-left">Generate Invoice</ion-col>
+                                        <ion-col size="2" class="ion-text-left textBold">09</ion-col>
+                                        <ion-col size="1" class="centerVEndH">
+                                            <ion-icon name="chevron-forward"></ion-icon>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-item>
+                                <ion-item class="bodyQPA">
+                                    <ion-row>
+                                        <ion-col size="9" class="ion-text-left">Marked as Shipped</ion-col>
+                                        <ion-col size="2" class="ion-text-left textBold">05</ion-col>
+                                        <ion-col size="1" class="centerVEndH">
+                                            <ion-icon name="chevron-forward"></ion-icon>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-item>
+                                <ion-item class="bodyQPA">
+                                    <ion-row>
+                                        <ion-col size="9" class="ion-text-left">Confirm Delivery</ion-col>
+                                        <ion-col size="2" class="ion-text-left textBold">100</ion-col>
+                                        <ion-col size="1" class="centerVEndH">
+                                            <ion-icon name="chevron-forward"></ion-icon>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-item>
+                            </ion-list>
+                        </ion-card-content>
+                    </ion-card>
+                    <!-- End Quick Pending Actions -->
+                    <!-- Start YTD Analytics -->
+                    <ion-card class="customCard">
+                        <ion-card-header class="cardHeadCont">
+                            <ion-row>
+                                <ion-col size="7" class="ion-text-left">
+                                    <h3>YTD Analytics</h3>
+                                </ion-col>
+                                <ion-col size="4" class="ytdSelectView">
+                                    <ion-list>
+                                        <ion-item>
+                                            <ion-label>Show:</ion-label>
+                                            <ion-select value="ytd">
+                                                <ion-select-option value="ytd">YTD</ion-select-option>
+                                                <ion-select-option value="ytd2">YTD 2</ion-select-option>
+                                            </ion-select>
+                                        </ion-item>
+                                    </ion-list>
+                                </ion-col>
+                                <ion-col size="1" class="ion-text-right">
+                                    <ion-icon class="ytdFullScan" name="scan"></ion-icon>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row class="graphCountYTD">
+                                <ion-col size="7" class="ion-text-left">
+                                    <h2>64.9%<ion-icon name="caret-up" class="green"></ion-icon>
+                                    </h2>
+                                </ion-col>
+                                <ion-col size="5">
+                                    <ion-label class="pull-left">LY<span>984.26</span></ion-label>
+                                    <ion-label class="pull-right">TY<span>1624.36</span></ion-label>
+                                    <div class="clear"></div>
+                                </ion-col>
+                            </ion-row>
+                        </ion-card-header>
+                        <ion-card-content class="p-0 cardContentBody yTDAnalyticsBody">
+                            <ion-row>
+                                <ion-col size="12" class="ion-text-center pTB7pLR11">
+                                    <canvas #barCanvas class="barCanvasChart" style="height:45vh;"></canvas>
+                                </ion-col>
+                            </ion-row>
+                        </ion-card-content>
+                    </ion-card>
+                    <!-- End YTD Analytics -->
+                    <!-- Start Order Status Slider -->
+                    <ion-slides>
+                        <ion-slide class="customCard customOrderSlide">
+                            <ion-row>
+                                <ion-col size="5" class="ion-text-left orderGraph">
+                                    <canvas #doughnutCanvas class="doughnutChart"></canvas>
+                                </ion-col>
+                                <ion-col size="7" class="ion-text-left orderCont">
+                                    <p>Total Orders</p>
+                                    <h3><i class="fa fa-inr"></i>7,285,650</h3>
+                                    <ion-button size="small">View All</ion-button>
+                                </ion-col>
+                            </ion-row>
+                        </ion-slide>
+                        <ion-slide class="customCard customOrderSlide">
+                            <ion-row>
+                                <ion-col size="5" class="ion-text-left orderGraph">
+                                    Graph
+                                </ion-col>
+                                <ion-col size="7" class="ion-text-left orderCont">
+                                    <p>Pending Orders</p>
+                                    <h3><i class="fa fa-inr"></i>7,285,650</h3>
+                                    <ion-button size="small">View All</ion-button>
+                                </ion-col>
+                            </ion-row>
+                        </ion-slide>
+                        <ion-slide class="customCard customOrderSlide">
+                            <ion-row>
+                                <ion-col size="5" class="ion-text-left orderGraph">
+                                    Graph
+                                </ion-col>
+                                <ion-col size="7" class="ion-text-left orderCont">
+                                    <p>Delivery Order</p>
+                                    <h3><i class="fa fa-inr"></i>7,285,650</h3>
+                                    <ion-button size="small">View All</ion-button>
+                                </ion-col>
+                            </ion-row>
+                        </ion-slide>
+                    </ion-slides>
+                    <!-- End Order Status Slider -->
+                    <!-- Start Top Contractors -->
+                    <ion-card class="customCard">
+                        <ion-card-header class="cardHeadCont">
+                            <ion-row>
+                                <ion-col size="9" class="ion-text-left">
+                                    <h3>Top Contractors</h3>
+                                </ion-col>
+                                <ion-col size="3" class="ion-text-right"><a href="#" title="View All">View All</a>
+                                </ion-col>
+                            </ion-row>
+                        </ion-card-header>
+                        <ion-card-content class="p-0 cardContentBody">
+                            <ion-list class="p-0">
+                                <ion-item class="p-0">
+                                    <ion-row class="w100 customItemBgRow">
+                                        <ion-col size="2">
+                                            <div class="proImg centerVH avatarImg">
+                                                <img src="../../assets/img/img_avatar.png" alt="img">
+                                            </div>
+                                            <div class="proStart">
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </ion-col>
+                                        <ion-col size="6" class="proContDetails">
+                                            <p>Aditya Narayan</p>
+                                            <h4><i class="fa fa-inr"></i>5,07,281.50</h4>
+                                        </ion-col>
+                                        <ion-col size="3" class="proContDetails proContDetailsLoc">
+                                            <p>Location</p>
+                                            <h4>New Delhi</h4>
+                                        </ion-col>
+                                        <ion-col size="1" class="centerVEndH nextDetailsIcon">
+                                            <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-item>
+                                <ion-item class="p-0">
+                                    <ion-row class="w100 customItemBgRow">
+                                        <ion-col size="2">
+                                            <div class="proImg centerVH avatarImg">
+                                                <img src="../../assets/img/img_avatar.png" alt="img">
+                                            </div>
+                                            <div class="proStart">
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </ion-col>
+                                        <ion-col size="6" class="proContDetails">
+                                            <p>Aditya Narayan</p>
+                                            <h4><i class="fa fa-inr"></i>5,07,281.00</h4>
+                                        </ion-col>
+                                        <ion-col size="3" class="proContDetails proContDetailsLoc">
+                                            <p>Location</p>
+                                            <h4>New Delhi</h4>
+                                        </ion-col>
+                                        <ion-col size="1" class="centerVEndH nextDetailsIcon">
+                                            <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-item>
+                            </ion-list>
+                        </ion-card-content>
+                    </ion-card>
+                    <!-- End Top Contractors -->
+                    <!-- Start Top Products -->
+                    <ion-card class="customCard">
+                        <ion-card-header class="cardHeadCont">
+                            <ion-row>
+                                <ion-col size="9" class="ion-text-left">
+                                    <h3>Top Products</h3>
+                                </ion-col>
+                                <ion-col size="3" class="ion-text-right"><a href="#" title="View All">View All</a>
+                                </ion-col>
+                            </ion-row>
+                        </ion-card-header>
+                        <ion-card-content class="p-0 cardContentBody">
+                            <div class="customTabs">
+                                <ion-segment (ionChange)="segmentChanged($event)" value="myTopPro">
+                                    <ion-segment-button value="myTopPro">
+                                        <ion-label>My Top Products</ion-label>
+                                    </ion-segment-button>
+                                    <ion-segment-button value="topProCity">
+                                        <ion-label>Top Products in the City</ion-label>
+                                    </ion-segment-button>
+                                </ion-segment>
+                                <!-- My Top Products Tabs-->
+                                <ion-list class="animate__animated animate__slideInUp animate__fast p-0"
+                                    *ngIf="segment === 'myTopPro'">
+                                    <ion-item class="p-0">
+                                        <ion-row class="w100 customItemBgRow">
+                                            <ion-col size="2">
+                                                <div class="proImg centerVH">
+                                                    <img src="../../assets/img/pro-img.png" alt="img">
+                                                </div>
+                                                <div class="proStart">
+                                                    <ion-icon name="star"></ion-icon>
+                                                </div>
+                                            </ion-col>
+                                            <ion-col size="9" class="proContDetails">
+                                                <p>Luxol Hi-Gloss Enamel</p>
+                                                <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                                            </ion-col>
+                                            <ion-col size="1" class="centerVEndH nextDetailsIcon">
+                                                <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                                            </ion-col>
+                                        </ion-row>
+                                    </ion-item>
+                                    <ion-item class="p-0">
+                                        <ion-row class="w100 customItemBgRow">
+                                            <ion-col size="2">
+                                                <div class="proImg centerVH">
+                                                    <img src="../../assets/img/pro-img.png" alt="img">
+                                                </div>
+                                                <div class="proStart">
+                                                    <ion-icon name="star"></ion-icon>
+                                                </div>
+                                            </ion-col>
+                                            <ion-col size="9" class="proContDetails">
+                                                <p>Luxol Hi-Gloss Enamel</p>
+                                                <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                                            </ion-col>
+                                            <ion-col size="1" class="centerVEndH nextDetailsIcon">
+                                                <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                                            </ion-col>
+                                        </ion-row>
+                                    </ion-item>
+                                </ion-list>
+                                <!-- Top Products in the City Tabs-->
+                                <ion-list class="animate__animated animate__slideInUp animate__fast p-0"
+                                    *ngIf="segment === 'topProCity'">
+                                    <ion-item class="p-0">
+                                        <ion-row class="w100 customItemBgRow">
+                                            <ion-col size="2">
+                                                <div class="proImg centerVH">
+                                                    <img src="../../assets/img/pro-img.png" alt="img">
+                                                </div>
+                                                <div class="proStart">
+                                                    <ion-icon name="star"></ion-icon>
+                                                </div>
+                                            </ion-col>
+                                            <ion-col size="9" class="proContDetails">
+                                                <p>Luxol Hi-Gloss Enamel</p>
+                                                <h4><i class="fa fa-inr"></i>7,281.50</h4>
+                                            </ion-col>
+                                            <ion-col size="1" class="centerVEndH nextDetailsIcon">
+                                                <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+                                            </ion-col>
+                                        </ion-row>
+                                    </ion-item>
+                                </ion-list>
+                            </div>
+                        </ion-card-content>
+                    </ion-card>
+                    <!-- End Top Products -->
+                    <!-- Start Recent Orders -->
+                    <ion-card class="customCard">
+                        <ion-card-header class="cardHeadCont">
+                            <ion-row>
+                                <ion-col size="9" class="ion-text-left">
+                                    <h3>Recent Orders</h3>
+                                </ion-col>
+                                <ion-col size="3" class="ion-text-right"><a href="#" title="View All">View All</a>
+                                </ion-col>
+                            </ion-row>
+                        </ion-card-header>
+                        <ion-card-content class="p-0 cardContentBody">
+                            <div class="table-responsive customBostTable">
+                                <table class="table table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Recent Orders</th>
+                                            <th>Total</th>
+                                            <th>Created On</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="#" title="">BPECOMOD20216482</a></td>
+                                            <td>Rs<span class="rightSpan">1783</span></td>
+                                            <td>10 Oct 2021, 10:56 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" title="">BPECOMOD20216482</a></td>
+                                            <td>Rs<span class="rightSpan">1783</span></td>
+                                            <td>10 Oct 2021, 10:56 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" title="">BPECOMOD20216482</a></td>
+                                            <td>Rs<span class="rightSpan">1783</span></td>
+                                            <td>10 Oct 2021, 10:56 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" title="">BPECOMOD20216482</a></td>
+                                            <td>Rs<span class="rightSpan">1783</span></td>
+                                            <td>10 Oct 2021, 10:56 PM</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </ion-card-content>
+                    </ion-card>
+                    <!-- End Recent Orders -->
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

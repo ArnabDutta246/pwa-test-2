@@ -28,6 +28,8 @@
     "@ionic-native/core": "^5.36.0",
     "@ionic/angular": "^5.5.2",
     "@ionic/pro": "2.0.4",
+    "@ionic-native/date-picker": "^5.36.0",
+    "chart.js": "^3.7.1",
     "ace-builds": "^1.4.13",
     "cordova-plugin-app-version": "^0.1.12",
     "rxjs": "~6.6.0",
