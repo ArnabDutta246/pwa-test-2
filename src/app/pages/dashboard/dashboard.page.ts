@@ -48,7 +48,12 @@ export class DashboardPage implements OnInit {
    })
     //========== please remove later ============
   }
-
+  //========== please remove later ============
+  // a2hs
+  addToHome(){
+    this.sw.addToHomeScreen(this.a2hsRes);
+  }
+  //========== please remove later ============
   barChartMethod() {
     this.barChart = new Chart(this.barCanvas.nativeElement, {
       type: 'bar',
