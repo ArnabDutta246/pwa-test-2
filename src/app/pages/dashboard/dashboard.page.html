@@ -27,8 +27,8 @@
             <ion-col size="12" class="p-0">
                 <!-- Start Pending Orders Section -->
                 <div class="darkPurple pendingOrdBg bodypadding pt-56">
-                                <!-- ======  [ Please remove later ] -->
-            <div style="background-color:var(--ion-color-warning);" (click)="addToHome()">
+            <!-- ======  [ Please remove later ] -->
+            <div  *ngIf="showBtn" style="background-color:var(--ion-color-warning);" (click)="addToHome()">
                 <ion-text color="dark">
                     <p class="ion-no-margin ion-text-center">Add To homescreen <ion-icon name="add-outline"></ion-icon></p>
                 </ion-text>

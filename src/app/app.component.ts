@@ -13,10 +13,10 @@ declare const navigator: any;
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Home', url: '/home', icon: 'mail' },
-    { title: 'Editor', url: '/code-editor', icon: 'paper-plane' },
-    { title: 'Codepan', url: '/codepan', icon: 'archive' },
-    { title: 'Themes', url: '/themes', icon: 'warning' },
+    // { title: 'Home', url: '/home', icon: 'mail' },
+    // { title: 'Editor', url: '/code-editor', icon: 'paper-plane' },
+    // { title: 'Codepan', url: '/codepan', icon: 'archive' },
+    // { title: 'Themes', url: '/themes', icon: 'warning' },
     { title: 'Dashboard', url: '/dashboard', icon: 'archive' },
     { title: 'Order', url: '/order', icon: 'trash' },
     { title: 'Folder', url: '/folder', icon: 'warning' },
