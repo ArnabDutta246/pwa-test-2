@@ -2,6 +2,7 @@ import { OnInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { Chart, registerables } from 'chart.js'; Chart.register(...registerables);
 import { ActivatedRoute } from '@angular/router';
 import { SwService } from 'src/app/shared/sw/sw.service';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,7 +19,7 @@ export class DashboardPage implements OnInit {
   barChart: any;
   doughnutChart: any;
 
-  constructor(private sw:SwService) { }
+  constructor(private sw:SwService,private route: ActivatedRoute,private toast:ToastController) { }
 
   segmentChanged(ev: any) {
     this.segment = ev.detail.value;
@@ -116,6 +117,20 @@ export class DashboardPage implements OnInit {
     });
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.route.queryParamMap.subscribe(async res=>{
+      if(res){
+       console.log("the parent response",res,res.get('user'));
+       let user = res.get('user');
+       if(user){
+        const toast = await this.toast.create({
+          message: `Parent User: ${user}`,
+          duration: 2000
+        });
+        toast.present();
+       }
+      }
+    })
+  }
 
 }
