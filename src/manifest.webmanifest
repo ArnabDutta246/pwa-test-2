@@ -60,5 +60,21 @@
       "type": "image/png",
       "purpose": "maskable any"
     }
+  ],
+  "shortcuts": [
+    {
+      "name": "Open Dashboard",
+      "short_name": "Dashboard",
+      "description": "View latest order and graph",
+      "url": "/dashboard",
+      "icons": [{ "src": "assets/icons/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "View Orders",
+      "short_name": "Orders",
+      "description": "View current open orders",
+      "url": "/order",
+      "icons": [{ "src": "assets/icons/icon-192x192.png", "sizes": "192x192" }]
+    }
   ]
 }
